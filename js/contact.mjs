@@ -40,20 +40,15 @@ groupForm.attachInput("email", new components.InputElementString({ label: "Email
 groupForm.attachInput("phone", new components.InputElementString({ label: "Phone", required: true }));
 groupForm.attachInput("billing", new components.InputElementText({ label: "Billing Address", required: false }));
 groupForm.attachInput("message", new components.InputElementText({ label: "Message", required: false }));
-groupForm.attachInput("recaptcha", new components.InputElementRecaptcha({ label: "Recaptcha", required: true }));
+//groupForm.attachInput("recaptcha", new components.InputElementRecaptcha({ label: "Recaptcha", required: true }));
 const submitButton = new components.InputElementButton(undefined, { text: "Submit" });
 submitButton.elementInput.addEventListener("click", () => {
-    if (groupForm.validate().valid === true) {
-        console.log("Form is valid");
-    } else {
-        console.log("Form is invalid");
+    if (!groupForm.validate().valid) {
         return;
     }
 
     /** @type {FormScorgiInterest} */
     const bodyForm = groupForm.get();
-
-    console.log("Body", bodyForm);
 
     const formResponse = {
         fullname: bodyForm.nameFirst + " " + bodyForm.nameLast,
@@ -67,7 +62,7 @@ submitButton.elementInput.addEventListener("click", () => {
         address: bodyForm.company.address,
         billingAddress: bodyForm.billing,
         message: bodyForm.message,
-        recaptcha: bodyForm.recaptcha,
+        //recaptcha: bodyForm.recaptcha,
     };
 
     const bodySubmit = {
