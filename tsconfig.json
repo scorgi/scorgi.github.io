@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        // Structure
+        "target": "es2022",
+        "module": "es2022",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "checkJs": true,
+        "strict": true,
+        "composite": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+
+        // Safety Rules
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+
+        // Performance
+        "skipLibCheck": true,
+        "incremental": true, // Enables incremental compilation for speed
+        "tsBuildInfoFile": "./.tsbuildinfo" // Location for build cache
+    },
+    "include": ["./**/*.js", "./**/*.mjs", "./**/*.d.ts"]
+}

@@ -1,11 +1,9 @@
-// @ts-check
-
-/** @typedef {import("./base.ts").SetResult} SetResult */
-/** @typedef {import("./base.ts").BoolOrObjectOfBool<boolean>} BoolOrObjectOfBool */
-/** @typedef {import("./base.ts").IGenericInputElementField} IGenericInputElementField */
-/** @typedef {import("./base.ts").IGenericInputElement} IGenericInputElement */
-/** @typedef {import("./base.ts").InputGroupOptions} InputGroupOptions */
-/** @typedef {import("./base.ts").InputGroupArrayOptions} InputGroupArrayOptions */
+/** @typedef {import("./base.d.ts").SetResult} SetResult */
+/** @typedef {import("./base.d.ts").BoolOrObjectOfBool<boolean>} BoolOrObjectOfBool */
+/** @typedef {import("./base.d.ts").IGenericInputElementField} IGenericInputElementField */
+/** @typedef {import("./base.d.ts").IGenericInputElement} IGenericInputElement */
+/** @typedef {import("./base.d.ts").InputGroupOptions} InputGroupOptions */
+/** @typedef {import("./base.d.ts").InputGroupArrayOptions} InputGroupArrayOptions */
 
 import * as Shared from "./shared.mjs";
 import * as VisualComponents from "./components-visual.mjs";
