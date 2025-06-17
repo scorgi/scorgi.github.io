@@ -1,0 +1,322 @@
+:root {
+    --brand-primary: #44ca81;
+    --brand-primary-light: #a0e4be;
+    --brand-primary-lighter: #cff2de;
+    --brand-primary-text: #fff;
+    --brand-primary-dark: #1b5f3a;
+    --brand-secondary: #f98e52;
+    --brand-secondary-light: #fbbf9d;
+    --brand-secondary-lighter: #fdd9c4;
+    --brand-secondary-dark: #bc4707;
+    --brand-secondary-darker: #712b04;
+    --brand-secondary-text: #fff;
+    --brand-tertiary: #000000;
+    --brand-navbar-mobile: #44ca81;
+    --brand-background: hsl(261, 100%, 50%);
+}
+
+body {
+    font-family: "Fredoka", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Fredoka", sans-serif !important;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+}
+
+.scorgi-container {
+    padding: 1.5rem;
+}
+
+.scorgi-header {
+    font-size: 2.3rem;
+}
+
+.glass-effect {
+    background-color: rgba(240, 239, 241, 0.55) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    color: black;
+}
+
+.btnGradient {
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white !important;
+    font-size: 17px;
+    background-image: linear-gradient(45deg, #73b8fe 0%, #9990fe 51%, #73b8fe 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-position 0.15s ease;
+    margin: 10px 0;
+    border-radius: 9rem;
+    font-weight: 500;
+    font-family: "Fredoka", sans-serif;
+    background-size: 200% auto;
+    display: block;
+    margin: 1rem auto 0 auto;
+}
+
+.btnGradient:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-position: right center;
+    color: white;
+}
+
+.btnGradient:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btnGradient:disabled {
+    background-image: linear-gradient(45deg, #747474 0%, #000000 51%, #000000 100%);
+}
+
+.bg-gradient {
+    background-image: linear-gradient(45deg, #73b8fe 0%, #9990fe 51%, #73b8fe 100%) !important;
+    color: white;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    position: relative;
+}
+
+.bg-gradient::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 25%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 75%
+    );
+    background-size: 200% 100%;
+    animation: shine 5s linear infinite;
+    border-radius: 5px;
+}
+
+.logo-hover {
+    transition: transform 0.15s ease;
+}
+
+.logo-hover:hover {
+    transform: scale(1.05);
+}
+
+@keyframes shine {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.container.glass-effect {
+    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+}
+
+.navbar-scorgi {
+    max-width: 60%;
+    height: 103px;
+    margin: 15px auto;
+    border-radius: 9rem;
+    background: rgb(255 255 255 / 60%);
+    box-shadow: 0 6px 10px 0 rgb(135 135 138 / 37%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.navbar-brand {
+    transition: color 0.15s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--brand-secondary) !important;
+}
+
+#backgroundColor {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+.footer-link {
+    color: var(--brand-secondary);
+    text-decoration: none;
+    transition: color 0.15s ease;
+    font-size: 1.1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    color: var(--brand-secondary-light);
+    text-decoration: none;
+}
+
+@media (max-width: 991px) {
+    .navbar-scorgi {
+        max-width: 90%;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-title {
+        font-size: 2.5rem !important;
+    }
+
+    .scorgi-header {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 585px) {
+    .scorgi-padding {
+        padding: 2rem !important;
+    }
+
+    .banner-section.scorgi-container {
+        margin-top: 110px !important;
+        padding: 0;
+    }
+
+    .banner-section {
+        min-height: calc(90dvh - 110px);
+    }
+
+    .navbar-brand {
+        font-size: 1rem !important;
+    }
+}
+
+.banner-section.scorgi-container {
+    margin-top: 150px;
+}
+
+.banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-title {
+    font-size: 3.5rem;
+}
+
+.banner-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.banner-image {
+    max-width: 450px;
+    height: auto;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1));
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.logo-image {
+    max-width: 450px;
+    height: auto;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1));
+    transform: scale(0.8);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.stripe-image {
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1));
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.come-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.navbar-scorgi:hover {
+    background: rgb(255 255 255 / 90%);
+    transition: ease-in-out 0.3s;
+}
+
+.feature-image {
+    border-radius: 0.6rem;
+}
+
+@media (max-width: 991px) {
+    .banner-section {
+        height: initial;
+    }
+
+    .banner-column {
+        text-align: center;
+        display: block;
+    }
+
+    .banner-image {
+        max-width: 100%;
+    }
+
+    .stripe-image {
+        max-height: initial;
+    }
+
+    .row {
+        margin: 0 !important;
+    }
+
+    .feature-image {
+        border-radius: 0.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-title {
+        font-size: 2rem !important;
+    }
+
+    .navbar-brand {
+        font-size: 0.9rem !important;
+    }
+}
