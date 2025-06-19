@@ -36,6 +36,17 @@ p {
   padding: 1.5rem;
 }
 
+/* Section wrapper styles for better organization */
+.banner-section-wrapper,
+.features-section-wrapper,
+.partner-section-wrapper,
+.trusted-by-section-wrapper,
+.jersey-made-section-wrapper,
+.contact-section-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
 .scorgi-header {
   font-size: 2.3rem;
 }
@@ -499,10 +510,6 @@ p {
 }
 
 @media (max-width: 585px) {
-  .scorgi-padding {
-    padding: 2rem !important;
-  }
-
   .banner-section.scorgi-container {
     margin-top: 110px !important;
     padding: 0;
@@ -590,20 +597,23 @@ p {
     display: block;
   }
 
-  .banner-image {
-    max-width: 100%;
-  }
-
-  .stripe-image {
-    max-height: initial;
-  }
-
   .row {
     margin: 0 !important;
   }
 
   .feature-image {
     border-radius: 0.4rem;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+  }
+  .banner-section-wrapper,
+  .features-section-wrapper,
+  .partner-section-wrapper,
+  .trusted-by-section-wrapper,
+  .jersey-made-section-wrapper,
+  .contact-section-wrapper {
+    margin: 0 2rem;
   }
 }
 
