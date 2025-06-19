@@ -31,40 +31,68 @@
     </head>
 
     <body>
-        <div id="gradient-background">
-            <a href="/"
-                ><img
-                    src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/logos/Scorgi/scorgi-horizontal.svg"
-                    alt="Scorgi Logo"
-                    class="logo"
-            /></a>
-            <div class="container text-center" style="background: none">
-                <p class="contact-text" style="font-family: Roboto, sans-serif; font-weight: 500; font-size: 1.2rem">
+        <!-- Navbar Placeholder -->
+        <div id="navbar-placeholder"></div>
+
+        <!-- Background SVG -->
+        <svg id="backgroundColor" preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
+            <path
+                fill="var(--brand-primary-lighter)"
+                class="out-top"
+                d="M37-5C25.1-14.7,5.7-19.1-9.2-10-28.5,1.8-32.7,31.1-19.8,49c15.5,21.5,52.6,22,67.2,2.3C59.4,35,53.7,8.5,37-5Z"
+                style="animation-play-state: running"
+            ></path>
+            <path
+                fill="var(--brand-primary-light)"
+                class="in-top"
+                d="M20.6,4.1C11.6,1.5-1.9,2.5-8,11.2-16.3,23.1-8.2,45.6,7.4,50S42.1,38.9,41,24.5C40.2,14.1,29.4,6.6,20.6,4.1Z"
+                style="animation-play-state: running"
+            ></path>
+            <path
+                fill="var(--brand-secondary-lighter)"
+                class="out-bottom"
+                d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z"
+                style="animation-play-state: running"
+            ></path>
+            <path
+                fill="var(--brand-secondary-light)"
+                class="in-bottom"
+                d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z"
+                style="animation-play-state: running"
+            ></path>
+        </svg>
+
+        <div class="scorgi-padding">
+            <!-- Contact Header Section -->
+            <section class="contact-header-section scorgi-container" style="box-shadow: none;">
+                <div class="container text-center" style="background: none">
+                <p class="contact-text my-2" style="font-family: Roboto, sans-serif; font-weight: 500; font-size: 1.2rem">
                     Scorgi has a dedicated, New Jersey-based team of <b>5 full-time developers</b> who are patiently
                     implementing Scorgi with our partners. Please fill out a contact form to start the conversation.<br /><i
                         >We promise that Scorgi doesn't bite!</i
                     >
                 </p>
-            </div>
+                </div>
+            </section>
 
             <div
                 id="divButtonContainer"
                 class="container scorgi-container glass-effect text-center my-2"
-                style="align-content: center"
+                style="align-content: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)"
             ></div>
 
             <div
                 id="divFormContainer"
-                class="container scorgi-container glass-effect d-none"
-                style="max-width: 800px"
+                class="container scorgi-container glass-effect pt-0 mb-5 d-none"
+                style="max-width: 800px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
             ></div>
 
             <!-- Trusted By different brands -->
-            <div id="divTrustedByContainer" class="container mb-3" style="background-color: initial">
+            <div id="divTrustedByContainer" class="container scorgi-container glass-effect my-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)">
                 <div class="row text-center" style="margin: 0 auto; max-width: 500px">
                     <div class="col-12">
                         <h2
-                            class="text-center font-weight-bold mt-4 mb-0"
+                            class="text-center font-weight-bold mb-0"
                             style="
                                 font-size: 1.5rem;
                                 font-family: Roboto, sans-serif;
@@ -96,7 +124,7 @@
                 </div>
             </div>
 
-            <div id="divFormSubmittedContainer" class="container glass-effect p-5 text-center d-none">
+            <div id="divFormSubmittedContainer" class="container scorgi-container glass-effect p-5 text-center d-none" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)">
                 <h2>
                     <i class="bi bi-check-circle-fill text-success mr-2"></i>
                     <span>Your response was received!</span>
@@ -108,5 +136,10 @@
                 />
             </div>
         </div>
+
+        <!-- Footer Placeholder -->
+        <div id="footer-placeholder"></div>
+
+        <script src="./js/ui/layout.mjs" type="module"></script>
     </body>
 </html>

@@ -93,6 +93,8 @@ submitButton.elementInput.addEventListener("click", () => {
         });
 });
 submitButton.elementInput.classList.add("btnGradient");
+submitButton.elementInput.classList.remove("mt-4");
+submitButton.elementInput.classList.add("mt-0");
 
 row.appendChild(submitButton.elementColumn);
 groupForm.setColumnLayout([6, 6, 8, 4, 12, 6, 6, 12, 12, 12]);
@@ -141,7 +143,7 @@ class buttonIAmA {
         this.col.appendChild(this.button);
 
         this.img = document.createElement("img");
-        this.img.classList.add("img-fluid", "mr-2");
+        this.img.classList.add("img-fluid", "mr-2", "mb-2");
         this.img.style.height = "100px";
         this.img.src = imgSrc;
         this.img.alt = "School Icon";
