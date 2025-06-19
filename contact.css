@@ -1,277 +1,277 @@
 body,
 html {
-    width: 100%;
-    background: #fff;
-    min-height: 100dvh;
+  width: 100%;
+  background: #fff;
+  min-height: 100dvh;
 }
 
 .scorgi-container {
-    padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-header-section.scorgi-container {
-    margin-top: 130px;
-    position: relative;
+  margin-top: 130px;
+  position: relative;
 }
 
 .glass-effect {
-    background-color: rgba(240, 239, 241, 0.55) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 1rem;
-    color: black;
+  background-color: rgba(240, 239, 241, 0.55) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  color: black;
 }
 
 .form-control {
-    border-radius: 0.25rem;
-    border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
 }
 
 .terms {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .form-label {
-    font-family: "Fredoka", sans-serif;
-    font-size: 1.1rem;
-    padding-left: 0.1rem;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.1rem;
+  padding-left: 0.1rem;
 }
 
 .btnGradient {
-    height: 50px;
-    width: 200px;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    color: white !important;
-    font-size: 17px;
-    background-image: linear-gradient(45deg, #73b8fe 0%, #9990fe 51%, #73b8fe 100%);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    outline: none;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-position 0.15s ease;
-    margin: 10px 0;
-    border-radius: 9rem;
-    font-weight: bold;
-    background-size: 200% auto;
-    display: block;
-    margin: 1.5rem auto 0 auto;
+  height: 50px;
+  width: 200px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  color: white !important;
+  font-size: 17px;
+  background-image: linear-gradient(45deg, #73b8fe 0%, #9990fe 51%, #73b8fe 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-position 0.15s ease;
+  margin: 10px 0;
+  border-radius: 9rem;
+  font-weight: bold;
+  background-size: 200% auto;
+  display: block;
+  margin: 1.5rem auto 0 auto;
 }
 
 .btnGradient:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    background-position: right center;
-    color: white;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-position: right center;
+  color: white;
 }
 
 .btnGradient:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .btnGradient:disabled {
-    background-image: linear-gradient(45deg, #747474 0%, #000000 51%, #000000 100%);
+  background-image: linear-gradient(45deg, #747474 0%, #000000 51%, #000000 100%);
 }
 
 .container.glass-effect {
-    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+  transition: opacity 0.15s ease-out, transform 0.15s ease-out;
 }
 
 .btn-form-option {
-    width: 100%;
-    padding: 1.5rem 2rem;
-    font-size: 1.1rem;
-    line-height: 1.4;
-    border-radius: 0.5rem;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-position 0.15s ease;
-    background: white;
-    border: 2px solid rgba(115, 184, 254, 0.3);
-    color: #333;
-    font-family: "Fredoka", sans-serif;
-    font-weight: 500;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 140px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  border-radius: 0.5rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-position 0.15s ease;
+  background: white;
+  border: 2px solid rgba(115, 184, 254, 0.3);
+  color: #333;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-form-option::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(115, 184, 254, 1) 0%, rgba(153, 144, 254, 1) 51%, rgba(115, 184, 254, 1) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(115, 184, 254, 1) 0%, rgba(153, 144, 254, 1) 51%, rgba(115, 184, 254, 1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
 }
 
 .btn-form-option:hover::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .btn-form-option:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-color: rgba(115, 184, 254, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: rgba(115, 184, 254, 0.8);
 }
 
 .btn-form-option:active {
-    transform: translateY(1px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    background: rgba(115, 184, 254, 0.1);
-    border-color: rgba(115, 184, 254, 1);
-    color: #333 !important;
+  transform: translateY(1px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  background: rgba(115, 184, 254, 0.1);
+  border-color: rgba(115, 184, 254, 1);
+  color: #333 !important;
 }
 
 .btn-form-option span {
-    position: relative;
-    z-index: 1;
-    transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
 .btn-back {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: initial;
-    border: none;
-    margin-top: 15px;
-    margin-right: 20px;
-    font-weight: 500;
-    font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: initial;
+  border: none;
+  margin-top: 15px;
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .bi-arrow-left {
-    display: inline-block;
-    transition: margin-right 0.15s ease;
+  display: inline-block;
+  transition: margin-right 0.15s ease;
 }
 
 .btn-back:hover .bi-arrow-left {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .trustedByLogo {
-    width: 100%;
-    height: auto;
-    transform: translateY(0rem);
-    filter: saturate(0.75);
-    transition: all 0.15s ease;
-    max-width: 150px;
-    max-height: 150px;
-    object-fit: contain;
-    filter: grayscale(1);
+  width: 100%;
+  height: auto;
+  transform: translateY(0rem);
+  filter: saturate(0.75);
+  transition: all 0.15s ease;
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: contain;
+  filter: grayscale(1);
 }
 
 .trustedByLogo:hover {
-    transform: translateY(-0.25rem);
-    filter: saturate(1);
-    cursor: pointer;
+  transform: translateY(-0.25rem);
+  filter: saturate(1);
+  cursor: pointer;
 }
 
 #imgFormSubmitted {
-    display: block;
-    max-height: 12rem;
-    width: auto;
-    margin: 0 auto;
-    padding-top: 1rem;
+  display: block;
+  max-height: 12rem;
+  width: auto;
+  margin: 0 auto;
+  padding-top: 1rem;
 }
 
 @media (max-width: 767px) {
-    .btn-form-option {
-        min-height: initial;
-        padding: 1rem 1.5rem;
-        font-size: 1rem;
-    }
+  .btn-form-option {
+    min-height: initial;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 585px) {
-    .contact-header-section.scorgi-container {
-        margin-top: 110px !important;
-    }
+  .contact-header-section.scorgi-container {
+    margin-top: 110px !important;
+  }
 }
 
 /* Images Code */
 
 .img-container {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 8rem;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8rem;
 }
 
 .left-images {
-    left: 0%;
+  left: 0%;
 }
 
 .right-images {
-    right: 0%;
+  right: 0%;
 }
 
 .fade-img {
-    flex: 1;
-    background-size: contain;
-    background-position: center;
-    opacity: 0;
-    animation-name: imageFade;
-    animation-duration: 12s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    background-repeat: no-repeat;
-    transition: opacity 0.6s ease-out;
+  flex: 1;
+  background-size: contain;
+  background-position: center;
+  opacity: 0;
+  animation-name: imageFade;
+  animation-duration: 12s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  transition: opacity 0.6s ease-out;
 }
 
 @keyframes imageFade {
-    0%,
-    100% {
-        opacity: 0;
-    }
-    25%,
-    75% {
-        opacity: 1;
-    }
+  0%,
+  100% {
+    opacity: 0;
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
 }
 
 .fade-img-1 {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .fade-img-4 {
-    animation-delay: 3s;
+  animation-delay: 3s;
 }
 
 .fade-img-2 {
-    animation-delay: 6s;
+  animation-delay: 6s;
 }
 
 .fade-img-3 {
-    animation-delay: 9s;
+  animation-delay: 9s;
 }
 
 .confirmation-message {
-    padding: 50px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
+  padding: 50px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
 
 .confirmation-message h2 {
-    color: var(--success);
+  color: var(--success);
 }
 
 .confirmation-message p {
-    color: #666;
-    font-size: 1.2rem;
+  color: #666;
+  font-size: 1.2rem;
 }

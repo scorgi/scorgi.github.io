@@ -1,358 +1,196 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
-    <head>
-        <title>Scorgi - The Premier SAT® Support Platform</title>
-        <meta name="description" content="Join Scorgi and unlock your potential with our state-of-the-art testing platform. We make SAT® preparation efficient and accessible for educators and students alike."/>
-        <link rel="icon" type="image/x-icon" href="./favicon.png" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
-        <link href="./styles.css" rel="stylesheet" />
-        <!-- AOS Library -->
-        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    </head>
+  <head>
+    <title>Scorgi - The Premier SAT® Support Platform</title>
+    <meta name="description" content="Join Scorgi and unlock your potential with our state-of-the-art testing platform. We make SAT® preparation efficient and accessible for educators and students alike." />
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
+    <!-- AOS Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
 
-    <body>
-        <!-- Navbar Placeholder -->
-        <div id="navbar-placeholder"></div>
+  <body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
 
-        <!-- Background SVG -->
-        <svg id="backgroundColor" preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
-            <path
-                fill="var(--brand-primary-lighter)"
-                class="out-top"
-                d="M37-5C25.1-14.7,5.7-19.1-9.2-10-28.5,1.8-32.7,31.1-19.8,49c15.5,21.5,52.6,22,67.2,2.3C59.4,35,53.7,8.5,37-5Z"
-                style="animation-play-state: running"
-            ></path>
-            <path
-                fill="var(--brand-primary-light)"
-                class="in-top"
-                d="M20.6,4.1C11.6,1.5-1.9,2.5-8,11.2-16.3,23.1-8.2,45.6,7.4,50S42.1,38.9,41,24.5C40.2,14.1,29.4,6.6,20.6,4.1Z"
-                style="animation-play-state: running"
-            ></path>
-            <path
-                fill="var(--brand-secondary-lighter)"
-                class="out-bottom"
-                d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z"
-                style="animation-play-state: running"
-            ></path>
-            <path
-                fill="var(--brand-secondary-light)"
-                class="in-bottom"
-                d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z"
-                style="animation-play-state: running"
-            ></path>
-        </svg>
+    <!-- Background SVG -->
+    <svg id="backgroundColor" preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
+      <path fill="var(--brand-primary-lighter)" class="out-top" d="M37-5C25.1-14.7,5.7-19.1-9.2-10-28.5,1.8-32.7,31.1-19.8,49c15.5,21.5,52.6,22,67.2,2.3C59.4,35,53.7,8.5,37-5Z" style="animation-play-state: running"></path>
+      <path fill="var(--brand-primary-light)" class="in-top" d="M20.6,4.1C11.6,1.5-1.9,2.5-8,11.2-16.3,23.1-8.2,45.6,7.4,50S42.1,38.9,41,24.5C40.2,14.1,29.4,6.6,20.6,4.1Z" style="animation-play-state: running"></path>
+      <path fill="var(--brand-secondary-lighter)" class="out-bottom" d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z" style="animation-play-state: running"></path>
+      <path fill="var(--brand-secondary-light)" class="in-bottom" d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z" style="animation-play-state: running"></path>
+    </svg>
 
-        <div class="scorgi-padding">
-            <!-- Banner Section -->
-            <section class="banner-section scorgi-container">
-                <div
-                    class="container banner-column glass-effect p-lg-5 p-0 mb-lg-0 mb-4"
-                    style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)"
-                >
-                    <img
-                        class="banner-image mb-lg-0 mb-4 order-lg-2 order-1 pt-lg-0 pt-4"
-                        src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Fscorgi%2Fstripes1.png"
-                        alt="Kid Taking SAT®"
-                    />
-                    <div class="banner-inner order-lg-1 order-2 p-lg-0 p-4">
-                        <h3>Introducing <span class="bg-gradient">Scorgi</span></h3>
-                        <h1 class="banner-title pt-3 pb-2">
-                            The Premier SAT<sup style="font-size: 0.5em; top: -1em">®</sup> Support Platform
-                        </h1>
-                        <p class="my-3" style="font-size: 1.3rem">
-                            Scorgi transforms the landscape of SAT<sup>®</sup> preparation by providing a robust
-                            platform designed to complement and enhance the efforts of tutors and educators. Developed
-                            by the top content creators at New Jersey's leading tutoring company, our platform delivers
-                            precise, actionable feedback that tutors and families can rely on to guide student success.
-                        </p>
-                    </div>
-                </div>
-            </section>
+    <div class="scorgi-padding">
+      <!-- Banner Section -->
+      <section class="banner-section scorgi-container">
+        <div class="container banner-column glass-effect p-lg-5 p-0 mb-lg-0 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)">
+          <img class="banner-image mb-lg-0 mb-4 order-lg-2 order-1 pt-lg-0 pt-4" src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Fscorgi%2Fstripes1.png" alt="Kid Taking SAT®" />
+          <div class="banner-inner order-lg-1 order-2 p-lg-0 p-4">
+            <h3>Introducing <span class="bg-gradient">Scorgi</span></h3>
+            <h1 class="banner-title pt-3 pb-2">
+              The Premier SAT<sup style="font-size: 0.5em; top: -1em">®</sup>
+              Support Platform
+            </h1>
+            <p class="my-3" style="font-size: 1.3rem">Scorgi transforms the landscape of SAT<sup>®</sup> preparation by providing a robust platform designed to complement and enhance the efforts of tutors and educators. Developed by the top content creators at New Jersey's leading tutoring company, our platform delivers precise, actionable feedback that tutors and families can rely on to guide student success.</p>
+          </div>
+        </div>
+      </section>
 
-            <!-- Features Section -->
-            <div
-                class="container scorgi-container glass-effect mb-lg-5 mb-4"
-                style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)"
-                data-aos="fade-right"
-            >
-                <div class="row py-lg-4 py-2" style="align-items: center">
-                    <div class="col-lg-6 col-12 order-lg-2 order-1 mb-lg-0 mb-4 text-lg-start text-center px-lg-4">
-                        <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">
-                            Tailored Tools for Effective Teaching
-                        </h3>
-                        <p class="mb-0" style="font-size: 1.3rem">
-                            Our platform isn't just about preparation; it's about enhancing the teaching process. With
-                            Scorgi, educators gain access to administrative tools that offer deep insights into student
-                            performance, enabling personalized instruction that is both effective and efficient.
-                        </p>
-                    </div>
-                    <div class="col-lg-6 col-12 order-lg-1 order-2 px-lg-4 px-0">
-                        <img
-                            src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-score-report.png"
-                            alt="Test Report Page"
-                            class="img-fluid feature-image"
-                            style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))"
-                        />
-                    </div>
-                </div>
-                <div class="row py-lg-4 py-2" style="align-items: center">
-                    <div class="col-lg-6 col-12 order-lg-2 order-2 px-lg-4 px-0">
-                        <img
-                            src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-goja.png"
-                            alt="Test Question View"
-                            class="img-fluid feature-image"
-                            style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))"
-                        />
-                    </div>
-                    <div class="col-lg-6 col-12 order-lg-1 order-1 my-lg-0 my-4 text-lg-start text-center px-lg-4">
-                        <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">
-                            Customizable SAT<sup style="font-size: 0.5em; top: -1em">®</sup> Content at Your Fingertips
-                        </h3>
-                        <p class="mb-0" style="font-size: 1.3rem">
-                            We offer a selection of 10 meticulously vetted full-length SATs, available for purchase
-                            either in entirety or by specific sections. This flexibility allows educators and tutors to
-                            tailor their teaching materials to meet the exact needs of their students, ensuring targeted
-                            practice where it is needed most.
-                        </p>
-                    </div>
-                </div>
-                <div class="row py-lg-4 py-2" style="align-items: center">
-                    <div class="col-lg-6 col-12 order-lg-2 order-1 mb-lg-0 mb-4 text-lg-start text-center px-lg-4">
-                        <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">
-                            Manage Student Schedules with Ease
-                        </h3>
-                        <p class="mb-0" style="font-size: 1.3rem">
-                            Scorgi provides a comprehensive schedule management system that allows educators to easily
-                            track student progress, assign tasks, and monitor performance. This ensures that students
-                            receive the support they need at the right time, helping them stay on track and achieve
-                            their goals.
-                        </p>
-                    </div>
-                    <div class="col-lg-6 col-12 order-lg-1 order-2 px-lg-4 px-0">
-                        <img
-                            src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-schedule-staff.png"
-                            alt="Manage Student Schedules with Ease"
-                            class="img-fluid feature-image"
-                            style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))"
-                        />
-                    </div>
-                </div>
-                <div class="row py-lg-4 py-2" style="align-items: center">
-                    <div class="col-lg-6 col-12 order-lg-2 order-2 px-lg-4 px-0">
-                        <img
-                            src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-pricing-model.png"
-                            alt="Flexible Pricing Model"
-                            class="img-fluid feature-image"
-                            style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))"
-                        />
-                    </div>
-                    <div class="col-lg-6 col-12 order-lg-1 order-1 my-lg-0 my-4 text-lg-start text-center px-lg-4">
-                        <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">
-                            Meet Your Client's Needs with Our Flexible Pricing Model
-                        </h3>
-                        <p class="mb-0" style="font-size: 1.3rem">
-                            Create the perfect pricing model with our flexible service model. Built from the ground up
-                            to meet the needs of educators at any scale, Scorgi lets you decide which pricing model
-                            works best for you.
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <!-- Features Section -->
+      <div class="container scorgi-container glass-effect mb-lg-5 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-right">
+        <div class="row py-lg-4 py-2" style="align-items: center">
+          <div class="col-lg-6 col-12 order-lg-2 order-1 mb-lg-0 mb-4 text-lg-start text-center px-lg-4">
+            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Tailored Tools for Effective Teaching</h3>
+            <p class="mb-0" style="font-size: 1.3rem">Our platform isn't just about preparation; it's about enhancing the teaching process. With Scorgi, educators gain access to administrative tools that offer deep insights into student performance, enabling personalized instruction that is both effective and efficient.</p>
+          </div>
+          <div class="col-lg-6 col-12 order-lg-1 order-2 px-lg-4 px-0">
+            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-score-report.png" alt="Test Report Page" class="img-fluid feature-image" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))" />
+          </div>
+        </div>
+        <div class="row py-lg-4 py-2" style="align-items: center">
+          <div class="col-lg-6 col-12 order-lg-2 order-2 px-lg-4 px-0">
+            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-goja.png" alt="Test Question View" class="img-fluid feature-image" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))" />
+          </div>
+          <div class="col-lg-6 col-12 order-lg-1 order-1 my-lg-0 my-4 text-lg-start text-center px-lg-4">
+            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">
+              Customizable SAT<sup style="font-size: 0.5em; top: -1em">®</sup>
+              Content at Your Fingertips
+            </h3>
+            <p class="mb-0" style="font-size: 1.3rem">We offer a selection of 10 meticulously vetted full-length SATs, available for purchase either in entirety or by specific sections. This flexibility allows educators and tutors to tailor their teaching materials to meet the exact needs of their students, ensuring targeted practice where it is needed most.</p>
+          </div>
+        </div>
+        <div class="row py-lg-4 py-2" style="align-items: center">
+          <div class="col-lg-6 col-12 order-lg-2 order-1 mb-lg-0 mb-4 text-lg-start text-center px-lg-4">
+            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Manage Student Schedules with Ease</h3>
+            <p class="mb-0" style="font-size: 1.3rem">Scorgi provides a comprehensive schedule management system that allows educators to easily track student progress, assign tasks, and monitor performance. This ensures that students receive the support they need at the right time, helping them stay on track and achieve their goals.</p>
+          </div>
+          <div class="col-lg-6 col-12 order-lg-1 order-2 px-lg-4 px-0">
+            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-schedule-staff.png" alt="Manage Student Schedules with Ease" class="img-fluid feature-image" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))" />
+          </div>
+        </div>
+        <div class="row py-lg-4 py-2" style="align-items: center">
+          <div class="col-lg-6 col-12 order-lg-2 order-2 px-lg-4 px-0">
+            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-pricing-model.png" alt="Flexible Pricing Model" class="img-fluid feature-image" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))" />
+          </div>
+          <div class="col-lg-6 col-12 order-lg-1 order-1 my-lg-0 my-4 text-lg-start text-center px-lg-4">
+            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Meet Your Client's Needs with Our Flexible Pricing Model</h3>
+            <p class="mb-0" style="font-size: 1.3rem">Create the perfect pricing model with our flexible service model. Built from the ground up to meet the needs of educators at any scale, Scorgi lets you decide which pricing model works best for you.</p>
+          </div>
+        </div>
+      </div>
 
-            <!-- Partner in Education Section -->
-            <div
-                class="container scorgi-container glass-effect mb-lg-5 mb-4 p-lg-4 p-0"
-                style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)"
-                data-aos="fade-up"
-            >
-                <div class="row py-lg-4 pt-2 text-lg-start text-center" style="align-items: center">
-                    <div
-                        class="col-lg-4 col-12 order-lg-1 order-2 text-lg-start text-center d-flex justify-content-center px-lg-2 px-0"
-                    >
-                        <img
-                            src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Fscorgi%2Fhowdyy.png"
-                            alt="Howdy Partner"
-                            class="stripe-image img-fluid pt-3 px-lg-3 px-0"
-                        />
-                    </div>
-                    <div class="col-lg-8 col-12 order-lg-2 order-1 text-center p-4">
-                        <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">
-                            Your Partner in Education
-                        </h3>
-                        <p class="mb-0" style="font-size: 1.3rem">
-                            Whether you’re an educator looking to provide focused, personalized SAT<sup>®</sup> training
-                            or a tutoring company seeking to offer top-tier educational products, Scorgi is your go-to
-                            resource for elevating educational outcomes.
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <!-- Partner in Education Section -->
+      <div class="container scorgi-container glass-effect mb-lg-5 mb-4 p-lg-4 p-0" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-up">
+        <div class="row py-lg-4 pt-2 text-lg-start text-center" style="align-items: center">
+          <div class="col-lg-4 col-12 order-lg-1 order-2 text-lg-start text-center d-flex justify-content-center px-lg-2 px-0">
+            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Fscorgi%2Fhowdyy.png" alt="Howdy Partner" class="stripe-image img-fluid pt-3 px-lg-3 px-0" />
+          </div>
+          <div class="col-lg-8 col-12 order-lg-2 order-1 text-center p-4">
+            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Your Partner in Education</h3>
+            <p class="mb-0" style="font-size: 1.3rem">Whether you’re an educator looking to provide focused, personalized SAT<sup>®</sup> training or a tutoring company seeking to offer top-tier educational products, Scorgi is your go-to resource for elevating educational outcomes.</p>
+          </div>
+        </div>
+      </div>
 
-            <!-- Trusted By Section -->
-            <div
-                class="container scorgi-container glass-effect mb-lg-5 mb-4"
-                style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)"
-                data-aos="fade-right"
-            >
-                <div class="row py-lg-4 py-2 text-lg-start text-center" style="align-items: center">
-                    <div
-                        class="col-lg-6 col-12 order-lg-1 order-2 mb-lg-0 text-lg-start text-center px-lg-4 mt-lg-0 mt-2"
-                    >
-                        <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">
-                            Collaborate with Us for Enhanced Learning Outcomes
-                        </h3>
-                        <p class="mb-0" style="font-size: 1.3rem">
-                            We are already partnering with major tutoring companies to integrate our platform into their
-                            teaching strategies, and we invite more educational institutions—both private and public—as
-                            well as individual tutors to discover how Scorgi can be integrated into their programs.
-                        </p>
-                    </div>
-                    <div class="col-lg-6 col-12 order-lg-2 order-1 mb-lg-0 text-lg-start text-center">
-                        <div class="d-flex justify-content-center">
-                            <div class="col-6 d-flex p-lg-2 p-0">
-                                <a class="d-block logo-hover w-100" href="https://foleyprep.com" target="_blank">
-                                    <img
-                                        src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Fbranding%2Ffoleyprep-logo-vertical.svg"
-                                        alt="Foley Prep"
-                                        class="logo-image img-fluid px-lg-3 px-0"
-                                        style="
-                                            filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1));
-                                            height: 100%;
-                                            width: 100%;
-                                        "
-                                    />
-                                </a>
-                            </div>
-                            <div class="col-6 p-lg-2 p-0">
-                                <a class="d-block logo-hover w-100" href="https://www.gsbschool.org/" target="_blank">
-                                    <img
-                                        src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Flogos%2Fgill-logo.png"
-                                        alt="Gill Logo"
-                                        class="logo-image img-fluid px-lg-3 px-0"
-                                        style="
-                                            filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1));
-                                            height: 85%;
-                                            width: 85%;
-                                        "
-                                    />
-                                </a>
-                            </div>
-                            <!-- <div class="col-6 p-lg-2 p-0">
+      <!-- Trusted By Section -->
+      <div class="container scorgi-container glass-effect mb-lg-5 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-right">
+        <div class="row py-lg-4 py-2 text-lg-start text-center" style="align-items: center">
+          <div class="col-lg-6 col-12 order-lg-1 order-2 mb-lg-0 text-lg-start text-center px-lg-4 mt-lg-0 mt-2">
+            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Collaborate with Us for Enhanced Learning Outcomes</h3>
+            <p class="mb-0" style="font-size: 1.3rem">We are already partnering with major tutoring companies to integrate our platform into their teaching strategies, and we invite more educational institutions—both private and public—as well as individual tutors to discover how Scorgi can be integrated into their programs.</p>
+          </div>
+          <div class="col-lg-6 col-12 order-lg-2 order-1 mb-lg-0 text-lg-start text-center">
+            <div class="d-flex justify-content-center">
+              <div class="col-6 d-flex p-lg-2 p-0">
+                <a class="d-block logo-hover w-100" href="https://foleyprep.com" target="_blank">
+                  <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Fbranding%2Ffoleyprep-logo-vertical.svg" alt="Foley Prep" class="logo-image img-fluid px-lg-3 px-0" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1)); height: 100%; width: 100%" />
+                </a>
+              </div>
+              <div class="col-6 p-lg-2 p-0">
+                <a class="d-block logo-hover w-100" href="https://www.gsbschool.org/" target="_blank">
+                  <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Flogos%2Fgill-logo.png" alt="Gill Logo" class="logo-image img-fluid px-lg-3 px-0" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1)); height: 85%; width: 85%" />
+                </a>
+              </div>
+              <!-- <div class="col-6 p-lg-2 p-0">
                             <a class="d-block logo-hover" target="_blank">
                                 <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Flogos%2Fyour-logo.png" alt="Your Logo" class="logo-image img-fluid px-lg-3 px-0" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1)); height: 85%; width: 85%;">
                             </a>
                         </div> -->
-                        </div>
-                    </div>
-                </div>
             </div>
-
-            <!-- Jersey Made Section -->
-            <div
-                class="container scorgi-container glass-effect mb-lg-5 mb-4 p-lg-4 p-0"
-                style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)"
-                data-aos="fade-up"
-            >
-                <div class="row py-lg-4 py-2 text-lg-start text-center" style="align-items: center">
-                    <div
-                        class="col-lg-4 col-12 order-lg-1 order-2 mb-lg-0 text-lg-start text-center d-flex justify-content-center px-0"
-                    >
-                        <img
-                            src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Fscorgi%2Fjersey-made.png"
-                            alt="Jersey Made"
-                            class="stripe-image img-fluid pt-3 px-lg-3"
-                        />
-                    </div>
-                    <div class="col-lg-8 col-12 order-lg-2 order-1 mb-lg-0 text-center p-4">
-                        <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">
-                            Jersey Made
-                        </h3>
-                        <p class="mb-0" style="font-size: 1.3rem">
-                            Made in NJ and already in use by hundreds of New Jersey’s students, Scorgi sets a high bar
-                            for quality and performance. As we roll out to a global audience, rest assured that the
-                            rigorous standards upheld by Jersey students continue to drive our commitment to excellence.
-                        </p>
-                    </div>
-                </div>
-                <!-- ˆ By Section -->
-                <div class="row py-lg-4 py-2">
-                    <div class="col-12 text-center">
-                        <div class="integrated-with-section">
-                            <h5 class="integrated-with-title mb-4">
-                                <i class="bi bi-lightning-charge-fill me-2"></i>
-                                Integrated with Industry Leaders
-                            </h5>
-                            <div class="tech-partners-grid">
-                                <div class="tech-partner-card">
-                                    <div class="partner-logo-container">
-                                        <img
-                                            src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/stripeLogo.png"
-                                            alt="Stripe - Payment Processing"
-                                            class="partner-logo"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="tech-partner-card">
-                                    <div class="partner-logo-container">
-                                        <img
-                                            src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/twilioLogo.svg.png"
-                                            alt="Twilio - Communications"
-                                            class="partner-logo"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="tech-partner-card">
-                                    <div class="partner-logo-container">
-                                        <img
-                                            src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/digitalOceanLogo.png"
-                                            alt="DigitalOcean - Cloud Infrastructure"
-                                            class="partner-logo"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="tech-partner-card">
-                                    <div class="partner-logo-container">
-                                        <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/chatGPTLogo.png" alt="ChatGPT Logo" class="partner-logo" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contact Us Section -->
-            <div
-                class="container scorgi-container glass-effect mb-lg-5 mb-4"
-                style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)"
-                data-aos="fade-right"
-            >
-                <div class="row py-lg-4 py-2 text-center">
-                    <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">
-                        Connect with Us
-                    </h3>
-                    <p class="mb-0 px-3" style="font-size: 1.3rem">
-                        Learn more about how the Scorgi platform can revolutionize your educational approach to the
-                        SAT<sup>®</sup>. Join us in our mission to enhance the tutoring experience and elevate student
-                        achievement.
-                        <a href="/contact" style="text-decoration: none"
-                            ><button class="btn btnGradient">Contact Us!</button></a
-                        >
-                    </p>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Footer Placeholder -->
-        <div id="footer-placeholder"></div>
+      <!-- Jersey Made Section -->
+      <div class="container scorgi-container glass-effect mb-lg-5 mb-4 p-lg-4 p-0" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-up">
+        <div class="row py-lg-4 py-2 text-lg-start text-center" style="align-items: center">
+          <div class="col-lg-4 col-12 order-lg-1 order-2 mb-lg-0 text-lg-start text-center d-flex justify-content-center px-0">
+            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Fscorgi%2Fjersey-made.png" alt="Jersey Made" class="stripe-image img-fluid pt-3 px-lg-3" />
+          </div>
+          <div class="col-lg-8 col-12 order-lg-2 order-1 mb-lg-0 text-center p-4">
+            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Jersey Made</h3>
+            <p class="mb-0" style="font-size: 1.3rem">Made in NJ and already in use by hundreds of New Jersey’s students, Scorgi sets a high bar for quality and performance. As we roll out to a global audience, rest assured that the rigorous standards upheld by Jersey students continue to drive our commitment to excellence.</p>
+          </div>
+        </div>
+        <!-- ˆ By Section -->
+        <div class="row py-lg-4 py-2">
+          <div class="col-12 text-center">
+            <div class="integrated-with-section">
+              <h5 class="integrated-with-title mb-4">
+                <i class="bi bi-lightning-charge-fill me-2"></i>
+                Integrated with Industry Leaders
+              </h5>
+              <div class="tech-partners-grid">
+                <div class="tech-partner-card">
+                  <div class="partner-logo-container">
+                    <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/stripeLogo.png" alt="Stripe - Payment Processing" class="partner-logo" />
+                  </div>
+                </div>
+                <div class="tech-partner-card">
+                  <div class="partner-logo-container">
+                    <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/twilioLogo.svg.png" alt="Twilio - Communications" class="partner-logo" />
+                  </div>
+                </div>
+                <div class="tech-partner-card">
+                  <div class="partner-logo-container">
+                    <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/digitalOceanLogo.png" alt="DigitalOcean - Cloud Infrastructure" class="partner-logo" />
+                  </div>
+                </div>
+                <div class="tech-partner-card">
+                  <div class="partner-logo-container">
+                    <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/chatGPTLogo.png" alt="ChatGPT Logo" class="partner-logo" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <!-- AOS Library Script -->
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-        <script src="./js/ui/layout.mjs" type="module"></script>
-        <script src="./js/landing.mjs" type="module"></script>
-    </body>
+      <!-- Contact Us Section -->
+      <div class="container scorgi-container glass-effect mb-lg-5 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-right">
+        <div class="row py-lg-4 py-2 text-center">
+          <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Connect with Us</h3>
+          <p class="mb-0 px-3" style="font-size: 1.3rem">
+            Learn more about how the Scorgi platform can revolutionize your educational approach to the SAT<sup>®</sup>. Join us in our mission to enhance the tutoring experience and elevate student achievement.
+            <a href="/contact" style="text-decoration: none"><button class="btn btnGradient">Contact Us!</button></a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- AOS Library Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/ui/layout.mjs" type="module"></script>
+    <script src="./js/landing.mjs" type="module"></script>
+  </body>
 </html>
