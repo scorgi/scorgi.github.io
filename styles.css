@@ -603,7 +603,6 @@ p {
 
   .feature-image {
     border-radius: 0.4rem;
-    max-width: 800px;
     margin: 0 auto;
     display: block;
   }
