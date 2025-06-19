@@ -348,15 +348,15 @@ p {
     font-style: italic;
 }
 
-/* Powered By Section Styles */
-.powered-by-title {
+/* Integrated With Section Styles */
+.integrated-with-title {
     font-family: "Fredoka", sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.powered-by-title i {
+.integrated-with-title i {
     color: var(--brand-secondary);
     font-size: 1.3rem;
 }
@@ -451,11 +451,11 @@ p {
     }
     
     /* Mobile styles for powered-by section */
-    .powered-by-section {
+    .integrated-with-section {
         padding: 1.5rem 0.5rem;
     }
     
-    .powered-by-title {
+    .integrated-with-title {
         font-size: 1.2rem;
         margin-bottom: 1.5rem;
     }
