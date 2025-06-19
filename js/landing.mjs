@@ -1,3 +1,8 @@
+// Import components
+import { renderSuccessStories } from "./ui/components/success-story-cards.mjs";
+import { renderPricingCards } from "./ui/components/pricing-cards.mjs";
+import { renderFAQAccordion } from "./ui/components/faq-dropdown.mjs";
+
 document.addEventListener("DOMContentLoaded", function () {
   // Existing intersection observer logic
   const observer = new IntersectionObserver((entries) => {
@@ -21,4 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
     mirror: true,
     offset: 120,
   });
+
+  // Render components after DOM is loaded and AOS is initialized
+  renderSuccessStories("success-stories-container");
+  renderPricingCards("pricing-cards-container");
+  renderFAQAccordion("faq-accordion-container");
 });
