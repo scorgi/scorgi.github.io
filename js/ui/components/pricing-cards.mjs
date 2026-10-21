@@ -58,10 +58,13 @@ export const createPricingCards = (plans = defaultPlans) => {
       featuresList.appendChild(featureItem);
     });
 
-    // Button
-    const button = document.createElement("button");
+    // Button (renders as <a> when buttonHref provided)
+    const button = plan.buttonHref
+      ? document.createElement("a")
+      : document.createElement("button");
     button.className = "btn btnGradient w-100";
     button.textContent = plan.buttonText;
+    if (plan.buttonHref) button.setAttribute("href", plan.buttonHref);
 
     // Assemble card
     card.appendChild(planHeader);
@@ -77,7 +80,7 @@ export const createPricingCards = (plans = defaultPlans) => {
 
 /**
  * @param {string} containerId
- * @param {Array<{name: string, price: string, period: string, features: string[], buttonText: string, isPopular: boolean}>|null} customPlans
+ * @param {Array<{name: string, price: string, period: string, features: string[], buttonText: string, buttonHref: string, isPopular: boolean}>|null} customPlans
  */
 export const renderPricingCards = (containerId, customPlans = null) => {
   const container = document.getElementById(containerId);
@@ -93,29 +96,49 @@ export const renderPricingCards = (containerId, customPlans = null) => {
 };
 
 // Default pricing plans data
+// TODO: replace "Starting at $—" with the real anchor price once finalized.
+// All feature bullets describe capabilities documented in the platform — no invented limits.
 const defaultPlans = [
   {
-    name: "Individual Educator",
-    price: "$?",
-    period: "/month",
-    features: ["Up to 25 students", "5 full-length practice tests", "Basic analytics dashboard", "Email support"],
-    buttonText: "Get Started",
-    isPopular: false,
-  },
-  {
-    name: "Tutoring Company",
-    price: "$?",
-    period: "/month",
-    features: ["Up to 100 students", "All 10 practice tests", "Advanced analytics & reporting", "Priority support", "White-label options"],
-    buttonText: "Get Started",
+    name: "Tutoring Studio",
+    price: "Starting at $—",
+    period: "/mo",
+    features: [
+      "Single-location platform access",
+      "Practice tests + AI Suite",
+      "Lead engagement via Thumper",
+      "Insights & reporting",
+    ],
+    buttonText: "Book a Demo",
+    buttonHref: "/routes/contact",
     isPopular: true,
   },
   {
-    name: "Educational Institution",
+    name: "Multi-Location",
+    price: "Talk to us",
+    period: "",
+    features: [
+      "Everything in Tutoring Studio",
+      "Multi-location management",
+      "Staff scheduling across sites",
+      "Cross-location reporting",
+    ],
+    buttonText: "Contact Sales",
+    buttonHref: "/routes/contact",
+    isPopular: false,
+  },
+  {
+    name: "Enterprise",
     price: "Custom",
     period: "",
-    features: ["Unlimited students", "Full test library access", "Custom integrations", "Dedicated support team", "Training & onboarding"],
+    features: [
+      "Everything in Multi-Location",
+      "White-label branding",
+      "Custom integrations",
+      "Custom contracts",
+    ],
     buttonText: "Contact Sales",
+    buttonHref: "/routes/contact",
     isPopular: false,
   },
 ];

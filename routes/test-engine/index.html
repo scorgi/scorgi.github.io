@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light" class="page-landing">
+  <head>
+    <meta charset="utf-8" />
+    <title>Scorgi - Practice Test Engine</title>
+    <meta name="description" content="Auto-graded diagnostics for 15+ standardized exams. Score reports, topic breakdowns, question-level analysis, and a QA pipeline that ensures every question is vetted." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Scorgi — Practice Test Engine" />
+    <meta property="og:description" content="Auto-graded diagnostics for 15+ standardized exams. Score reports, topic breakdowns, question-level analysis, and a QA pipeline that ensures every question is vetted." />
+    <meta property="og:image" content="https://scorgi.com/images/og/scorgi-og.png" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <link rel="canonical" href="https://scorgi.com/routes/test-engine/" />
+    <meta property="og:url" content="https://scorgi.com/routes/test-engine/" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero-section banner-section position-relative pb-5">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <span class="section-eyebrow">Practice Tests</span>
+          <h1 class="hero-title mx-auto" style="max-width: 650px;">Auto-Graded Diagnostics for <span class="gradient-text">Every Exam</span></h1>
+          <p class="hero-subtitle mx-auto text-center" style="max-width: 540px;">Auto-graded diagnostics for 15+ standardized exams. Students take timed practice tests on any device, and Scorgi instantly generates score reports, topic breakdowns, and personalized study plans.</p>
+        </div>
+        <div class="row justify-content-center mt-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-10">
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <span class="exam-badge exam-badge-green">SAT</span>
+              <span class="exam-badge exam-badge-green">ACT</span>
+              <span class="exam-badge exam-badge-dark">HSPT</span>
+              <span class="exam-badge exam-badge-dark">SSAT</span>
+              <span class="exam-badge exam-badge-dark">ISEE</span>
+              <span class="exam-badge exam-badge-orange">GRE</span>
+              <span class="exam-badge exam-badge-orange">GMAT</span>
+              <span class="exam-badge exam-badge-orange">LSAT</span>
+              <span class="exam-badge exam-badge-orange">MCAT</span>
+              <span class="exam-badge exam-badge-orange">DAT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LIVE DEMO ========== -->
+    <section class="landing-section pt-0">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5" data-aos="fade-right">
+            <span class="section-eyebrow">Try It Yourself</span>
+            <h2 class="section-heading">Take the <span class="gradient-text">Live Demo</span></h2>
+            <p>The same test experience Foley Prep's students use: timed sections, annotation, answer elimination, mark for review, and 1.5&times; or 2&times; extended time. No account needed.</p>
+            <a href="https://foleyprep.com/goja/demo" target="_blank" rel="noopener" class="btn btnGradient mt-2" data-track="test_engine_live_demo">Start the demo test <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+          </div>
+          <div class="col-lg-7 img-decorated" data-aos="fade-left">
+            <img src="/images/foley-prep/test-demo-question-2026-10.webp" alt="Digital test question with an answer selected, Mark for Review, answer elimination, annotation, and a section timer" class="section-screenshot img-fluid rounded-4 shadow" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Grid -->
+    <section class="landing-section section-alt">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-7" data-aos="fade-up">
+            <span class="section-eyebrow">Platform Features</span>
+            <h2 class="section-heading">From Test to <span class="gradient-text">Study Plan</span> in Seconds</h2>
+            <p>Every practice test flows through a pipeline that grades, analyzes, and recommends next steps automatically.</p>
+          </div>
+        </div>
+        <div id="feature-cards"></div>
+      </div>
+    </section>
+
+    <!-- Screenshot + QA Highlight -->
+    <section class="landing-section section-brand-tint">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 img-decorated" data-aos="fade-right">
+            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-goja.png" alt="Goja test interface" class="section-screenshot img-fluid rounded-4 shadow" />
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <span class="section-eyebrow">Quality Assurance</span>
+            <h2 class="section-heading">Every Question is <span class="gradient-text">Vetted</span></h2>
+            <p>Our QA pipeline ensures that every question students see has been reviewed for accuracy, difficulty calibration, and alignment with the latest exam specifications.</p>
+            <div class="qa-highlight p-4 mt-3">
+              <h6 class="mb-2"><i class="bi bi-shield-fill-check text-success me-2"></i>QA Pipeline Stages</h6>
+              <ul class="feature-list mb-0">
+                <li><i class="bi bi-1-circle-fill me-2"></i>Content creation by subject-matter experts</li>
+                <li><i class="bi bi-2-circle-fill me-2"></i>Peer review for accuracy and clarity</li>
+                <li><i class="bi bi-3-circle-fill me-2"></i>Difficulty calibration against real exam data</li>
+                <li><i class="bi bi-4-circle-fill me-2"></i>Student pilot testing with feedback collection</li>
+                <li><i class="bi bi-5-circle-fill me-2"></i>Final approval and publication</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SCORE REPORTS ========== -->
+    <section class="landing-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <span class="section-eyebrow">Score Reports</span>
+            <h2 class="section-heading">Every Test Turns Into a <span class="gradient-text">Score Report</span></h2>
+            <p class="section-description">Auto-grading closes the loop: each completed test produces a report with the section breakdown and topic-level performance, and the results roll up so you can see improvement across a whole cohort.</p>
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <div class="icon-container"><i class="bi bi-graph-up-arrow"></i></div>
+                <div>
+                  <strong>Initial vs. Best</strong>
+                  <p>Every student's first score sits next to their best, with the gain between them &mdash; per test type, over any window.</p>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <div class="icon-container icon-container-secondary"><i class="bi bi-people"></i></div>
+                <div>
+                  <strong>Cohort Averages</strong>
+                  <p>Average increase by exam &mdash; SAT, ACT, HSPT, ISEE, SSAT and more &mdash; so you can prove the program works.</p>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <div class="icon-container"><i class="bi bi-shield-check"></i></div>
+                <div>
+                  <strong>Shareable &amp; Anonymized</strong>
+                  <p>Publish results publicly with students reduced to initials, exactly as foleyprep.com does with its live results page.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 img-decorated img-decorated-alt" data-aos="fade-left">
+            <div class="screenshot-placeholder"
+                 data-src="/images/foley-prep/results-live-2026-10.webp"
+                 data-title="Student Score Improvements"
+                 data-alt="Live score improvement results: students improved, average increase by exam, published live on foleyprep.com">
+              <i class="bi bi-clipboard-data"></i>
+              <span>Score Reports</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta-section">
+      <div class="container text-center" data-aos="fade-up">
+        <h2 class="final-cta-heading">Give Your Students the Best Practice Experience</h2>
+        <p class="final-cta-subtitle">See how Scorgi's test engine can streamline diagnostics and improve student outcomes.</p>
+        <a href="/routes/contact" class="btn btnGradient btn-lg mt-3 mx-auto">Get Started</a>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="/js/ui/layout.mjs" type="module"></script>
+    <script src="/js/pages/test-engine.mjs" type="module"></script>
+  </body>
+</html>

@@ -1,51 +1,58 @@
 /**
  * Success Story Cards Component
- * Generates success story cards with student testimonials and score improvements
+ * Renders verified Google reviews of Foley Prep (Scorgi's flagship
+ * deployment) as testimonial cards. Review data lives in
+ * js/data/reviews.mjs — real reviews only, never invented ones.
  */
 
-export const createSuccessStoryCards = (stories = defaultStories) => {
+import { REVIEWS, LOCATION_NAMES, REVIEWS_SOURCE } from "../../data/reviews.mjs";
+
+const createStarsRow = (rating) => {
+  const stars = document.createElement("div");
+  stars.className = "d-flex gap-1 mb-2";
+  for (let i = 0; i < 5; i++) {
+    const star = document.createElement("i");
+    star.className = i < rating ? "bi bi-star-fill" : "bi bi-star";
+    star.style.color = "var(--brand-secondary)";
+    stars.appendChild(star);
+  }
+  return stars;
+};
+
+export const createSuccessStoryCards = (reviews = REVIEWS) => {
   const container = document.createElement("div");
   container.className = "row g-4";
 
-  stories.forEach((story) => {
+  reviews.forEach((review) => {
     const cardCol = document.createElement("div");
     cardCol.className = "col-lg-4 col-md-6 col-12";
 
-    // Create card structure
     const card = document.createElement("div");
-    card.className = "success-story-card h-100";
+    card.className = "success-story-card h-100 d-flex flex-column";
 
-    // Score badge
-    const scoreDiv = document.createElement("div");
-    scoreDiv.className = "story-score";
-    scoreDiv.textContent = `+${story.scoreIncrease} Points`;
+    card.appendChild(createStarsRow(review.rating));
 
-    // Student name
-    const nameH5 = document.createElement("h5");
-    nameH5.className = "story-name";
-    nameH5.textContent = story.name;
-
-    // School
-    const schoolP = document.createElement("p");
-    schoolP.className = "story-school";
-    schoolP.textContent = story.school;
-
-    // Quote
     const quoteP = document.createElement("p");
-    quoteP.className = "story-quote";
-    quoteP.textContent = `"${story.quote}"`;
+    quoteP.className = "story-quote flex-grow-1";
+    quoteP.textContent = `"${review.text}"`;
 
-    // Score improvement
-    const improvementDiv = document.createElement("div");
-    improvementDiv.className = "story-improvement";
-    improvementDiv.textContent = `${story.beforeScore} → ${story.afterScore}`;
+    const nameH5 = document.createElement("h5");
+    nameH5.className = "story-name mb-0";
+    nameH5.textContent = review.author;
 
-    // Assemble card
-    card.appendChild(scoreDiv);
-    card.appendChild(nameH5);
-    card.appendChild(schoolP);
+    const locationP = document.createElement("p");
+    locationP.className = "story-school mb-2";
+    locationP.textContent = `Foley Prep — ${LOCATION_NAMES[review.location] || review.location} · ${review.time}`;
+
+    const verified = document.createElement("div");
+    verified.className = "d-flex align-items-center gap-2";
+    verified.style.cssText = "font-size: 0.8rem; color: #86868b;";
+    verified.innerHTML = '<i class="bi bi-google"></i><span>Verified Google review</span>';
+
     card.appendChild(quoteP);
-    card.appendChild(improvementDiv);
+    card.appendChild(nameH5);
+    card.appendChild(locationP);
+    card.appendChild(verified);
 
     cardCol.appendChild(card);
     container.appendChild(cardCol);
@@ -56,47 +63,16 @@ export const createSuccessStoryCards = (stories = defaultStories) => {
 
 /**
  * @param {string} containerId
- * @param {Array<{name: string, school: string, scoreIncrease: number, beforeScore: number, afterScore: number, quote: string}>|null} customStories
+ * @param {Array<{author: string, location: string, rating: number, time: string, text: string}>|null} customReviews
  */
-export const renderSuccessStories = (containerId, customStories = null) => {
+export const renderSuccessStories = (containerId, customReviews = null) => {
   const container = document.getElementById(containerId);
   if (!container) {
     console.error(`Container with id '${containerId}' not found`);
     return;
   }
 
-  const storiesData = customStories || defaultStories;
-  const storiesCards = createSuccessStoryCards(storiesData);
-
-  container.appendChild(storiesCards);
+  container.appendChild(createSuccessStoryCards(customReviews || REVIEWS));
 };
 
-// Default success stories data
-const defaultStories = [
-  {
-    name: "Sarah M.",
-    school: "Ridge High School",
-    scoreIncrease: 240,
-    beforeScore: 1180,
-    afterScore: 1420,
-    quote: "Scorgi's detailed feedback helped me identify exactly where I needed to improve. The practice tests felt just like the real thing!",
-  },
-  {
-    name: "Marcus T.",
-    school: "Holmdel High School",
-    scoreIncrease: 190,
-    beforeScore: 1210,
-    afterScore: 1400,
-    quote: "The scheduling tools made it easy for my tutor to track my progress. I knew exactly what to focus on each week.",
-  },
-  {
-    name: "Emma L.",
-    school: "Watchung Hills Regional",
-    scoreIncrease: 170,
-    beforeScore: 1290,
-    afterScore: 1460,
-    quote: "Being able to practice individual sections helped me target my weakest areas without wasting time.",
-  },
-];
-
-export { defaultStories };
+export { REVIEWS as defaultStories, REVIEWS_SOURCE };

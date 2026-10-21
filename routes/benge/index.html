@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light" class="page-landing">
+  <head>
+    <meta charset="utf-8" />
+    <title>Scorgi - Benge Kanban Boards</title>
+    <meta name="description" content="Project management built for education — customizable Kanban boards with real-time collaboration, Gantt charts, and Slack integration." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Scorgi — Benge Kanban Boards" />
+    <meta property="og:description" content="Drag-and-drop Kanban boards with real-time WebSocket collaboration, Gantt charts, and Slack integration." />
+    <meta property="og:image" content="https://scorgi.com/images/og/scorgi-og.png" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <link rel="canonical" href="https://scorgi.com/routes/benge/" />
+    <meta property="og:url" content="https://scorgi.com/routes/benge/" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero-section banner-section position-relative pb-5">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <span class="section-eyebrow">Benge</span>
+          <h1 class="hero-title mx-auto" style="max-width: 650px;">Project Management Built for <span class="gradient-text">Education</span></h1>
+          <p class="hero-subtitle mx-auto text-center" style="max-width: 540px;">Customizable Kanban boards with rich cards, real-time collaboration, and integrations designed for education teams.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BOARDS & CARDS ========== -->
+    <section class="landing-section">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <span class="section-eyebrow">Boards & Cards</span>
+            <h2 class="section-heading">Organize Work Your Way</h2>
+            <p class="section-description">Create customizable lists (columns) and drag-and-drop cards between them. Each card is a rich workspace with everything your team needs to stay aligned.</p>
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <div class="icon-container"><i class="bi bi-card-heading"></i></div>
+                <div>
+                  <strong>Rich Cards</strong>
+                  <p>Every card supports a name, description, due dates, star priority, assigned members, a designated leader, color-coded labels, threaded comments, and nested checklists.</p>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <div class="icon-container icon-container-secondary"><i class="bi bi-arrows-move"></i></div>
+                <div>
+                  <strong>Drag-and-Drop</strong>
+                  <p>Move cards between lists and reorder them within a list with smooth drag-and-drop. Changes sync instantly across all connected browsers.</p>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <div class="icon-container"><i class="bi bi-check2-square"></i></div>
+                <div>
+                  <strong>Nested Checklists</strong>
+                  <p>Break work into sub-tasks with nested checklists. Track completion percentage at a glance and never lose sight of what's left.</p>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <div class="icon-container icon-container-secondary"><i class="bi bi-tags"></i></div>
+                <div>
+                  <strong>Labels & Priorities</strong>
+                  <p>Color-coded labels categorize work by type, subject, or urgency. Star cards to mark high-priority items that need immediate attention.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 img-decorated" data-aos="fade-left">
+            <div class="screenshot-placeholder"
+                 data-src="/images/scorgi-app/benge-kanban.webp"
+                 data-title="Benge — Kanban Board"
+                 data-alt="A Benge kanban board with color-coded labels, priorities, assignees, and due dates">
+              <i class="bi bi-kanban-fill"></i>
+              <span>Kanban Board</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== REAL-TIME & INTEGRATIONS ========== -->
+    <section class="landing-section section-alt">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+            <span class="section-eyebrow">Real-Time & Integrations</span>
+            <h2 class="section-heading">Collaborate Without Refreshing</h2>
+            <p class="section-description">WebSocket-powered real-time collaboration means every card move, comment, and status change appears instantly for all connected team members. No page refreshes needed.</p>
+            <ul class="feature-list">
+              <li class="feature-list-item">
+                <div class="icon-container"><i class="bi bi-bell"></i></div>
+                <div>
+                  <strong>List Subscribers</strong>
+                  <p>Subscribe to any list and receive push notifications whenever cards are added, moved, or updated. Stay informed without watching the board all day.</p>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <div class="icon-container icon-container-secondary"><i class="bi bi-clock-history"></i></div>
+                <div>
+                  <strong>Full Audit Trail</strong>
+                  <p>Every action is logged with timestamps and user attribution. Review the complete history of any card, list, or board at any time.</p>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <div class="icon-container"><i class="bi bi-bar-chart-line"></i></div>
+                <div>
+                  <strong>Gantt Chart View</strong>
+                  <p>Switch to Gantt view to visualize timelines and dependencies across cards. See how tasks connect and identify scheduling conflicts.</p>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <div class="icon-container icon-container-secondary"><i class="bi bi-slack"></i></div>
+                <div>
+                  <strong>Slack Integration</strong>
+                  <p>Connect to Slack for instant notifications and AI-generated Monday summaries that recap the week's progress across all boards.</p>
+                </div>
+              </li>
+              <li class="feature-list-item">
+                <div class="icon-container"><i class="bi bi-copy"></i></div>
+                <div>
+                  <strong>Card Cloning</strong>
+                  <p>Clone cards as templates for recurring tasks. Duplicate a card's structure — checklists, labels, assignments — in one click.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-lg-1 img-decorated img-decorated-alt" data-aos="fade-right">
+            <div class="screenshot-placeholder"
+                 data-src="/images/scorgi-app/benge-collab.webp"
+                 data-title="Shared boards"
+                 data-alt="Benge cards with multiple assignee avatars collaborating on shared columns">
+              <i class="bi bi-broadcast"></i>
+              <span>Real-Time Collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta-section">
+      <div class="container text-center" data-aos="fade-up">
+        <h2 class="final-cta-heading">Keep Your Team Organized</h2>
+        <p class="final-cta-subtitle">From lesson planning to content production, Benge keeps every project on track in real time.</p>
+        <a href="/routes/contact" class="btn btnGradient btn-lg mt-3 mx-auto">Book a Demo</a>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="/js/ui/layout.mjs" type="module"></script>
+    <script src="/js/pages/generic.mjs" type="module"></script>
+  </body>
+</html>

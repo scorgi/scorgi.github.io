@@ -1,444 +1,521 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<!doctype html>
+<html lang="en" data-bs-theme="light" class="page-landing">
   <head>
-    <title>Scorgi - The Premier SAT® Support Platform</title>
-    <meta name="description" content="Join Scorgi and unlock your potential with our state-of-the-art testing platform. We make SAT® preparation efficient and accessible for educators and students alike." />
-    <link rel="icon" type="image/x-icon" href="./favicon.png" />
+    <meta charset="utf-8" />
+    <title>Scorgi - From Google Search to 5-Star Review</title>
+    <meta name="description" content="Scorgi powers the entire student journey — SEO to get found, instant engagement with Thumper, auto-graded diagnostics, tutor matching, and review collection. The all-in-one growth platform for tutoring businesses." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Scorgi — From Google Search to 5-Star Review" />
+    <meta property="og:description" content="The full-funnel growth platform for tutoring businesses. SEO, instant engagement, diagnostics, scheduling, and reviews — all in one." />
+    <meta property="og:image" content="https://scorgi.com/images/og/scorgi-og.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
-    <link href="./styles.css" rel="stylesheet" />
-    <!-- AOS Library -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="/css/styles.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <link rel="canonical" href="https://scorgi.com/" />
+    <meta property="og:url" content="https://scorgi.com/" />
   </head>
 
   <body>
-    <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Background SVG -->
-    <svg id="backgroundColor" preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
-      <path fill="var(--brand-primary-lighter)" class="out-top" d="M37-5C25.1-14.7,5.7-19.1-9.2-10-28.5,1.8-32.7,31.1-19.8,49c15.5,21.5,52.6,22,67.2,2.3C59.4,35,53.7,8.5,37-5Z" style="animation-play-state: running"></path>
-      <path fill="var(--brand-primary-light)" class="in-top" d="M20.6,4.1C11.6,1.5-1.9,2.5-8,11.2-16.3,23.1-8.2,45.6,7.4,50S42.1,38.9,41,24.5C40.2,14.1,29.4,6.6,20.6,4.1Z" style="animation-play-state: running"></path>
-      <path fill="var(--brand-secondary-lighter)" class="out-bottom" d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z" style="animation-play-state: running"></path>
-      <path fill="var(--brand-secondary-light)" class="in-bottom" d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z" style="animation-play-state: running"></path>
-    </svg>
-
-    <!-- Banner Section -->
-    <section class="banner-section-wrapper">
-      <div class="banner-section scorgi-container px-0">
-        <div class="container-lg container-fluid banner-column glass-effect p-lg-5 p-4 px-5 mb-lg-0 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)">
-          <img class="banner-image mb-lg-0 mb-4 order-lg-2 order-1 pt-lg-0 pt-4" src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Fscorgi%2Fstripes1.png" alt="Kid Taking SAT®" />
-          <div class="banner-inner order-lg-1 order-2 p-lg-0 p-0">
-            <h3>Introducing <span class="bg-gradient">Scorgi</span></h3>
-            <h1 class="banner-title pt-3 pb-2">
-              The Premier SAT<sup style="font-size: 0.5em; top: -1em">®</sup>
-              Support Platform
-            </h1>
-            <p class="my-3" style="font-size: 1.3rem">Scorgi transforms the landscape of SAT<sup>®</sup> preparation by providing a robust platform designed to complement and enhance the efforts of tutors and educators. Developed by the top content creators at New Jersey's leading tutoring company, our platform delivers precise, actionable feedback that tutors and families can rely on to guide student success.</p>
+    <!-- ========== 1. HERO ========== -->
+    <section class="hero-section banner-section position-relative pb-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-12 mb-lg-0 mb-5" data-aos="fade-up">
+            <span class="section-eyebrow">From Google Search to 5-Star Review</span>
+            <h1 class="hero-title">The all-in-one <span class="gradient-text">growth platform</span> for tutoring businesses.</h1>
+            <p class="hero-subtitle">Scorgi powers every step of the student journey — SEO to get found, instant engagement, auto-graded diagnostics, tutor matching, and review collection. One platform, full funnel.</p>
+            <div class="hero-ctas">
+              <a href="/routes/contact" class="btn btnGradient">Book a Demo</a>
+              <a href="/routes/pricing" class="btn-outline-glass">See Pricing</a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 text-center" data-aos="fade-up" data-aos-delay="150">
+            <div class="screenshot-placeholder banner-image come-in img-decorated"
+                 data-src="/images/scorgi-app/staff-dashboard.webp"
+                 data-title="Scorgi Staff Dashboard"
+                 data-alt="The Scorgi staff dashboard — quick links to users, records, tests, schedules, insights, content creation, school tracker, and management tools"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section-wrapper">
-      <div class="container-lg container-fluid scorgi-container glass-effect mb-lg-5 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-right">
-        <div class="row py-3" style="align-items: center">
-          <div class="col-lg-6 col-12 order-lg-2 order-1 mb-lg-0 mb-4 text-lg-start text-center px-lg-4 px-3">
-            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Tailored Tools for Effective Teaching</h3>
-            <p class="mb-0" style="font-size: 1.3rem">Our platform isn't just about preparation; it's about enhancing the teaching process. With Scorgi, educators gain access to administrative tools that offer deep insights into student performance, enabling personalized instruction that is both effective and efficient.</p>
-          </div>
-          <div class="col-lg-6 col-12 order-lg-1 order-2 px-lg-4 px-3">
-            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-score-report.png" alt="Test Report Page" class="img-fluid feature-image" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))" />
-          </div>
+    <!-- SOCIAL PROOF BAR -->
+    <div class="social-proof-wrapper py-4 position-relative z-1" style="background: #f5f5f7">
+      <div class="container">
+        <div class="social-proof-bar mt-0 py-0 border-0">
+          <div class="proof-stat"><strong>Full-Funnel Platform</strong><span>SEO to reviews, one system</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-stat"><strong>Instant Engagement</strong><span>Respond to leads in under 60s</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-stat"><strong>15+ Exams Supported</strong><span>SAT, ACT, HSPT, GRE &amp; more</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-stat"><strong>White-Label Ready</strong><span>Your brand, your platform</span></div>
         </div>
-        <div class="row py-3" style="align-items: center">
-          <div class="col-lg-6 col-12 order-lg-2 order-2 px-lg-4 px-3">
-            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-goja.png" alt="Test Question View" class="img-fluid feature-image" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))" />
-          </div>
-          <div class="col-lg-6 col-12 order-lg-1 order-1 my-lg-0 my-4 text-lg-start text-center px-lg-4 px-3">
-            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">
-              Customizable SAT<sup style="font-size: 0.5em; top: -1em">®</sup>
-              Content at Your Fingertips
-            </h3>
-            <p class="mb-0" style="font-size: 1.3rem">We offer a selection of 10 meticulously vetted full-length SATs, available for purchase either in entirety or by specific sections. This flexibility allows educators and tutors to tailor their teaching materials to meet the exact needs of their students, ensuring targeted practice where it is needed most.</p>
-          </div>
+      </div>
+    </div>
+
+    <!-- ========== 2. THE JOURNEY (Centerpiece) ========== -->
+    <section id="journey-section" class="landing-section">
+      <div class="container" data-aos="fade-up">
+        <div class="text-center mb-5 pb-3">
+          <span class="section-eyebrow">The Scorgi Journey</span>
+          <h2 class="section-heading">Every Step from Discovery to <span class="gradient-text">Advocacy</span></h2>
+          <p class="text-body-secondary mx-auto" style="max-width: 580px">Most platforms manage your business. Scorgi grows it. Here's how we turn a Google search into a 5-star review.</p>
         </div>
-        <div class="row py-3" style="align-items: center">
-          <div class="col-lg-6 col-12 order-lg-2 order-1 mb-lg-0 mb-4 text-lg-start text-center px-lg-4 px-3">
-            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Manage Student Schedules with Ease</h3>
-            <p class="mb-0" style="font-size: 1.3rem">Scorgi provides a comprehensive schedule management system that allows educators to easily track student progress, assign tasks, and monitor performance. This ensures that students receive the support they need at the right time, helping them stay on track and achieve their goals.</p>
-          </div>
-          <div class="col-lg-6 col-12 order-lg-1 order-2 px-lg-4 px-3">
-            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-schedule-staff.png" alt="Manage Student Schedules with Ease" class="img-fluid feature-image" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))" />
-          </div>
+        <div id="journey-steps-container"></div>
+      </div>
+    </section>
+
+    <!-- ========== 2b. PRODUCT VIDEO ========== -->
+    <section id="watch" class="landing-section section-brand-tint">
+      <div class="container" data-aos="fade-up">
+        <div class="text-center mb-5">
+          <span class="section-eyebrow">See It in Action</span>
+          <h2 class="section-heading">The Platform Behind <span class="gradient-text">Foley Prep</span></h2>
+          <p class="text-body-secondary mx-auto" style="max-width: 580px">Real screens from the platform Foley Prep runs on every day: intake, lead replies, practice tests, progress reports, and the business dashboard.</p>
         </div>
-        <div class="row py-3" style="align-items: center">
-          <div class="col-lg-6 col-12 order-lg-2 order-2 px-lg-4 px-3">
-            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-pricing-model.png" alt="Flexible Pricing Model" class="img-fluid feature-image" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))" />
-          </div>
-          <div class="col-lg-6 col-12 order-lg-1 order-1 my-lg-0 my-4 text-lg-start text-center px-lg-4 px-3">
-            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Meet Your Client's Needs with Our Flexible Pricing Model</h3>
-            <p class="mb-0" style="font-size: 1.3rem">Create the perfect pricing model with our flexible service model. Built from the ground up to meet the needs of educators at any scale, Scorgi lets you decide which pricing model works best for you.</p>
-          </div>
+        <div class="mx-auto img-decorated" style="max-width: 960px">
+          <video class="w-100 rounded-4 shadow d-block" controls playsinline preload="none" poster="/videos/scorgi-overview-wide-poster.jpg?v=2026-10-21e" aria-label="Scorgi product overview">
+            <source src="/videos/scorgi-overview-wide.mp4?v=2026-10-21e" type="video/mp4" />
+            <track kind="captions" src="/videos/scorgi-overview.vtt?v=2026-10-21e" srclang="en" label="English" />
+            <a href="/videos/scorgi-overview-wide.mp4?v=2026-10-21e">Download the overview video</a>.
+          </video>
         </div>
-        <div class="row py-3" style="align-items: center">
-          <div class="col-lg-6 col-12 order-lg-2 order-1 mb-lg-0 mb-4 text-lg-start text-center px-lg-4 px-3">
-            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Stay Connected to Your Clients</h3>
-            <p class="mb-0" style="font-size: 1.3rem">Scorgi provides a unified Communications Dashboard to make client interactions easy and secure. Handle both outgoing and incoming calls from nearly any device, whether it's a phone, laptop, or tablet. Send and receive text messages from your browser. Summarize conversations and generate suggested replies using the latest AI models.</p>
+        <div class="d-flex justify-content-center mt-4">
+          <a href="/routes/contact" class="btn btnGradient" data-track="video_demo">Book a Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. FEATURE TABS (Noto-style) ========== -->
+    <section id="platform-glance" class="landing-section section-alt">
+      <div class="container" data-aos="fade-up">
+        <div class="text-center mb-5 pb-3">
+          <span class="section-eyebrow">The Platform</span>
+          <h2 class="section-heading">Everything You Need in <span class="gradient-text">One Place</span></h2>
+          <p class="text-body-secondary mx-auto" style="max-width: 540px">Click through to explore each capability. One platform, every tool.</p>
+        </div>
+        <div id="feature-tabs-container"></div>
+      </div>
+    </section>
+
+    <!-- ========== 4. AI DEEP DIVE — Apple-style Fade Gallery ========== -->
+    <section id="ai-section" class="ai-section landing-section section-brand-tint">
+      <div class="container" data-aos="fade-up">
+        <div class="text-center mb-5 pb-3">
+          <span class="section-eyebrow">AI-Powered</span>
+          <h2 class="section-heading">Intelligence Built Into <span class="gradient-text">Every Interaction</span></h2>
+        </div>
+        <div id="ai-gallery-container"></div>
+      </div>
+    </section>
+
+    <!-- ========== 5. INLINE CTA ========== -->
+    <section class="inline-cta-section position-relative z-1 py-5">
+      <div class="container">
+        <div class="section-glass text-center d-flex flex-column align-items-center mx-auto" data-aos="fade-up" style="max-width: 800px">
+          <h3 class="mb-3" style="font-size: 2rem; font-weight: 700">Stop juggling five different tools.</h3>
+          <p class="text-body-secondary mb-4" style="font-size: 1.05rem; max-width: 520px">We'll show you how Scorgi replaces your current stack in a 20-minute walkthrough.</p>
+          <a href="/routes/contact" class="btn btnGradient">Book a Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. COMPARISON TABLE ========== -->
+    <section id="compare-section" class="landing-section section-alt">
+      <div class="container" data-aos="fade-up">
+        <div>
+          <div class="text-center mb-5 pb-3">
+            <span class="section-eyebrow">Compare</span>
+            <h2 class="section-heading">Why Choose <span class="gradient-text">Scorgi</span>?</h2>
+            <p class="text-body-secondary mx-auto" style="max-width: 600px">Other platforms do one thing. Scorgi does everything — and it's built specifically for education.</p>
           </div>
-          <div class="col-lg-6 col-12 order-lg-1 order-2 px-lg-4 px-3">
-            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-communications-dashboard.png" alt="Stay Connected to Your Clients" class="img-fluid feature-image" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1))" />
+          <div class="table-responsive">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th class="feature-column">Features</th>
+                  <th class="scorgi-column">
+                    <div class="provider-header"><img src="/images/favicon.png" alt="Scorgi" class="provider-logo" /><span>Scorgi</span></div>
+                  </th>
+                  <th class="competitor-column">Noto</th>
+                  <th class="competitor-column">Others</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature-name">SEO &amp; GEO (Get Found Online)</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Instant Lead Engagement (Thumper)</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-partial">~</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Practice Test Engine (15+ Exams)</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Automated Review Collection</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">AI Tutoring Suite (7 Tools)</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-partial">~</span></td>
+                  <td class="competitor-cell"><span class="check-partial">~</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">529 Plan Support</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Scheduling &amp; Calendar</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Payments &amp; Invoicing</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">White-Label &amp; Custom Branding</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                  <td class="competitor-cell"><span class="check-yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">SMS &amp; Voice Communication</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-partial">~</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Multi-Location Management</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-partial">~</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">School Tracker &amp; Fit Analysis</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Content Creation &amp; QA Pipeline</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Kanban Project Management</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">PTO &amp; Staff Leave Management</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-partial">~</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                </tr>
+                <tr>
+                  <td class="feature-name">Built-in Campaign Tool (Message Blast)</td>
+                  <td class="scorgi-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-yes">&#10003;</span></td>
+                  <td class="competitor-cell"><span class="check-no">&#10007;</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-center text-body-secondary mt-3" style="font-size: 0.82rem">Most tutoring platforms focus on running lessons and billing. Scorgi adds the <strong>growth and teaching layer</strong>: SEO, a practice-test engine, topic-level insights, and school tracking. “Others” = Teachworks and TutorCruncher. &#10007; = not listed on the vendor’s public site, October 2026. <a href="/routes/scorgi-vs-competitors" style="color: var(--brand-primary); font-weight: 600">See full comparison &rarr;</a></p>
+          <div class="d-flex justify-content-center mt-4">
+            <a href="/routes/contact" class="btn btnGradient">Book a Demo</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Partner in Education Section -->
-    <section class="partner-section-wrapper">
-      <div class="container-lg container-fluid scorgi-container glass-effect mb-lg-5 mb-4 p-lg-4 p-3" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-up">
-        <div class="row py-3 text-lg-start text-center" style="align-items: center">
-          <div class="col-lg-4 col-12 order-lg-1 order-2 text-lg-start text-center d-flex justify-content-center px-lg-2 px-0">
-            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Fscorgi%2Fhowdyy.png" alt="Howdy Partner" class="stripe-image img-fluid pt-3 px-lg-3 px-0" />
+    <!-- ========== 7. FOR EDUCATORS ========== -->
+    <section class="landing-section section-brand-tint">
+      <div class="container">
+        <div class="text-center mb-5 pb-3" data-aos="fade-up">
+          <span class="section-eyebrow">For Educators</span>
+          <h2 class="section-heading">Built for Tutoring Companies That Want to <span class="gradient-text">Scale</span></h2>
+        </div>
+
+        <!-- Management Dashboard -->
+        <div class="feature-row" data-aos="fade-up">
+          <div class="feature-row-text">
+            <h4><i class="bi bi-speedometer2 me-2" style="color: var(--brand-primary)"></i>Management Dashboard</h4>
+            <p class="text-body-secondary">Complete business visibility in one view. Action logs track every platform event. A 5-stage lead pipeline (Leads → Qualified → Active → Customers → Renewals) with automatic lead scoring prioritizes your hottest prospects. See abandoned carts, failed transactions, and revenue attribution by marketing channel.</p>
+            <ul class="feature-list">
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Lead scoring and conversion tracking</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Session approval queue with payment status</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Revenue attribution by lead source</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Contact list export for targeted outreach</li>
+            </ul>
           </div>
-          <div class="col-lg-8 col-12 order-lg-2 order-1 text-center p-4">
-            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Your Partner in Education</h3>
-            <p class="mb-0" style="font-size: 1.3rem">Whether you're an educator looking to provide focused, personalized SAT<sup>®</sup> training or a tutoring company seeking to offer top-tier educational products, Scorgi is your go-to resource for elevating educational outcomes.</p>
+          <div class="feature-row-image img-decorated">
+            <img src="/images/scorgi-app/management-overview-2026-10.webp" alt="Scorgi Management Tools overview: what needs attention across session requests, payments, PTO, and retention (counts blurred)" />
+          </div>
+        </div>
+
+        <!-- Staff Scheduling -->
+        <div class="feature-row reverse" data-aos="fade-up">
+          <div class="feature-row-text">
+            <h4><i class="bi bi-calendar-check me-2" style="color: var(--brand-primary)"></i>Staff Scheduling</h4>
+            <p class="text-body-secondary">Calendar or Table view with 5 operating modes — View, Add, Edit, Move (drag-to-reschedule), and Cancel. Filter by date range, location, and staff member. Advanced tools include availability calculators, session demand heatmaps, and Selectat for bulk-proposing recurring schedules.</p>
+          </div>
+          <div class="feature-row-image img-decorated img-decorated-alt">
+            <img src="/images/scorgi-app/scorgi-schedule-staff-2026-10.webp" alt="Staff scheduling" />
+          </div>
+        </div>
+
+        <!-- Content Creation -->
+        <div class="feature-row" data-aos="fade-up">
+          <div class="feature-row-text">
+            <h4><i class="bi bi-pencil-square me-2" style="color: var(--brand-secondary)"></i>Content Creation Platform</h4>
+            <p class="text-body-secondary">Five interconnected tools for creating, reviewing, and publishing test content. Problems follow an 8-stage lifecycle with a multi-reviewer QA system requiring 2+ consensus. Kanban-style production management tracks every problem from draft to deployment.</p>
+            <ul class="feature-list">
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Problem Editor with metadata, solutions, and rationales</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Test Editor with timed sections and scoring configs</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>QA Tool with 11 issue categories and reviewer consensus</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Shared HTML Editor with MathJax and CDN media</li>
+            </ul>
+          </div>
+          <div class="feature-row-image img-decorated">
+            <img src="/images/scorgi-app/content-creation-dashboard-2026-10.webp" alt="Scorgi Content Creation dashboard with QA review queue, feedback stats, and contributed tests" />
+          </div>
+        </div>
+
+        <div id="educator-cards"></div>
+      </div>
+    </section>
+
+    <!-- ========== 8. FOR STUDENTS & FAMILIES ========== -->
+    <section class="landing-section section-alt">
+      <div class="container">
+        <div class="text-center mb-5 pb-3" data-aos="fade-up">
+          <span class="section-eyebrow">For Students &amp; Families</span>
+          <h2 class="section-heading">Your Child's Success, <span class="gradient-text">Powered by Technology</span></h2>
+        </div>
+
+        <!-- Insights & Worksheet Generator -->
+        <div class="feature-row" data-aos="fade-up">
+          <div class="feature-row-text">
+            <h4><i class="bi bi-bar-chart-line me-2" style="color: var(--brand-primary)"></i>Insights &amp; Worksheet Generator</h4>
+            <p class="text-body-secondary">Topic-level skill tiers (Beginner → Mastery) calculated from accuracy, speed, and difficulty. Trend indicators show Improving, Declining, or Stable. Staleness warnings flag topics unpracticed for 14+ days. Speed risk alerts detect when a student is 30%+ slower than peers.</p>
+            <div class="qa-highlight mt-3">
+              <p class="mb-0"><i class="bi bi-lightning-charge-fill me-2" style="color: var(--brand-secondary)"></i><strong>Worksheet Generator</strong> — Select struggling topics, set quantity (max 30 problems), and generate targeted practice from the full problem bank. Group mode creates shared worksheets for up to 8 students.</p>
+            </div>
+          </div>
+          <div class="feature-row-image img-decorated img-decorated-alt">
+            <img src="/images/foley-prep/progress-board-wide-2026-10.webp" alt="Color-coded topic board: every topic sorted Beginner to Mastery with the points within reach" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- School Tracker -->
+        <div class="feature-row reverse" data-aos="fade-up">
+          <div class="feature-row-text">
+            <h4><i class="bi bi-mortarboard me-2" style="color: var(--brand-secondary)"></i>School Tracker</h4>
+            <p class="text-body-secondary">Browse thousands of schools with fuzzy search. Filter by acceptance rate, tuition, SAT/ACT fit, and distance from zip code. Our fit analysis algorithm classifies each school as Likely, Match, or Reach based on the student's best scores.</p>
+            <ul class="feature-list">
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>8 application statuses with deadlines and checklists</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Drag-and-drop podium rankings with trophies</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>4-year cost estimator with in-state/out-of-state toggle</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Secure share tokens for parents and counselors</li>
+            </ul>
+          </div>
+          <div class="feature-row-image img-decorated">
+            <img src="/images/scorgi-app/school-search.webp" alt="Scorgi School Tracker browsing 1,037 colleges with acceptance rate, SAT range, and tuition" />
+          </div>
+        </div>
+
+        <div id="student-cards"></div>
+      </div>
+    </section>
+
+    <!-- ========== 9. SUCCESS STORIES ========== -->
+    <section class="landing-section section-brand-tint">
+      <div class="container" data-aos="fade-up">
+        <div class="text-center mb-5 pb-3">
+          <span class="section-eyebrow">Results</span>
+          <h2 class="section-heading">Students Succeed with <span class="gradient-text">Scorgi</span></h2>
+          <p class="text-body-secondary mx-auto" style="max-width: 540px">Verified Google reviews from Foley Prep — the flagship tutoring company running everything on Scorgi.</p>
+        </div>
+        <div id="success-stories-container"></div>
+        <div class="text-center mt-4">
+          <a href="/routes/testimonials" class="btn-outline-glass">See All Testimonials</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 8. HOW IT WORKS ========== -->
+    <section class="landing-section section-alt">
+      <div class="container" data-aos="fade-up">
+        <div>
+          <div class="text-center mb-5 pb-3">
+            <span class="section-eyebrow">Getting Started</span>
+            <h2 class="section-heading">Up and Running in <span class="gradient-text">Three Steps</span></h2>
+          </div>
+          <div class="row g-4 text-center">
+            <div class="col-lg-4 col-12">
+              <div class="step-number">1</div>
+              <h4>20-Minute Demo</h4>
+              <p class="text-body-secondary">See exactly how Scorgi handles your scheduling, payments, and test prep. No slides — live product.</p>
+            </div>
+            <div class="col-lg-4 col-12">
+              <div class="step-number">2</div>
+              <h4>We Build It For You</h4>
+              <p class="text-body-secondary">Your branding, locations, staff, pricing, and content library — configured and ready to go.</p>
+            </div>
+            <div class="col-lg-4 col-12">
+              <div class="step-number">3</div>
+              <h4>Go Live</h4>
+              <p class="text-body-secondary">Start booking sessions, running tests, and managing your business from day one.</p>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center mt-4">
+            <a href="/routes/contact" class="btn btnGradient">Get Started</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Trusted By Section -->
-    <section class="trusted-by-section-wrapper">
-      <div class="container-lg container-fluid scorgi-container glass-effect mb-lg-5 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-right">
-        <div class="row py-lg-5 pt-0 py-3 text-lg-start text-center" style="align-items: center">
-          <div class="col-lg-6 col-12 order-lg-1 order-2 mb-lg-0 text-lg-start text-center px-lg-4 px-3 mt-lg-0 mt-2">
-            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Collaborate with Us for Enhanced Learning Outcomes</h3>
-            <p class="mb-0" style="font-size: 1.3rem">We are already partnering with major tutoring companies to integrate our platform into their teaching strategies, and we invite more educational institutions—both private and public—as well as individual tutors to discover how Scorgi can be integrated into their programs.</p>
+    <!-- ========== 9. FAQ ========== -->
+    <section class="landing-section">
+      <div class="container" data-aos="fade-up">
+        <div class="text-center mb-5 pb-3">
+          <span class="section-eyebrow">FAQ</span>
+          <h2 class="section-heading">Common <span class="gradient-text">Questions</span></h2>
+        </div>
+        <div class="mx-auto" style="max-width: 720px">
+          <div id="faq-accordion-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 10. TRUST + INTEGRATIONS + PARTNERS ========== -->
+    <section class="landing-section section-alt">
+      <div class="container" data-aos="fade-up">
+        <div>
+          <!-- Integrations -->
+          <div class="text-center mb-4">
+            <span class="section-eyebrow">Integrations</span>
+            <h3 class="section-heading" style="font-size: 2rem">Works with the tools you already use</h3>
           </div>
-          <div class="col-lg-6 col-12 order-lg-2 order-1 mb-lg-0 text-lg-start text-center px-3">
-            <div class="d-flex justify-content-center">
-              <div class="col-6 d-flex p-lg-2 p-2">
-                <a class="d-block logo-hover w-100" href="https://foleyprep.com" target="_blank">
-                  <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Fbranding%2Ffoleyprep-logo-vertical.svg" alt="Foley Prep" class="logo-image img-fluid px-lg-3 px-2" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1)); height: 100%; width: 100%" />
-                </a>
-              </div>
-              <div class="col-6 p-lg-2 p-2">
-                <a class="d-block logo-hover w-100" href="https://www.gsbschool.org/" target="_blank">
-                  <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Flogos%2Fgill-logo.png" alt="Gill Logo" class="logo-image img-fluid px-lg-3 px-2" style="filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.1)); height: 85%; width: 85%" />
-                </a>
-              </div>
+          <div class="integration-grid">
+            <div class="integration-chip">
+              <div class="integration-icon"><img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/stripeLogo.png" alt="Stripe" /></div>
+              <span>Stripe</span>
+            </div>
+            <div class="integration-chip">
+              <div class="integration-icon"><img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/twilioLogo.svg.png" alt="Twilio" /></div>
+              <span>Twilio</span>
+            </div>
+            <div class="integration-chip">
+              <div class="integration-icon"><img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/digitalOceanLogo.png" alt="DigitalOcean" /></div>
+              <span>DigitalOcean</span>
+            </div>
+            <div class="integration-chip">
+              <div class="integration-icon"><img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/chatGPTLogo.png" alt="OpenAI" /></div>
+              <span>OpenAI</span>
+            </div>
+            <div class="integration-chip">
+              <div class="integration-icon integration-icon-placeholder"><i class="bi bi-camera-video"></i></div>
+              <span>Google Meet</span>
+            </div>
+            <div class="integration-chip">
+              <div class="integration-icon integration-icon-placeholder"><i class="bi bi-slack"></i></div>
+              <span>Slack</span>
+            </div>
+            <div class="integration-chip">
+              <div class="integration-icon integration-icon-placeholder"><i class="bi bi-geo-alt"></i></div>
+              <span>Google Maps</span>
+            </div>
+            <div class="integration-chip">
+              <div class="integration-icon integration-icon-placeholder"><i class="bi bi-calendar-event"></i></div>
+              <span>iCal</span>
+            </div>
+            <div class="integration-chip">
+              <div class="integration-icon integration-icon-placeholder"><i class="bi bi-image"></i></div>
+              <span>ImgProxy</span>
+            </div>
+            <div class="integration-chip">
+              <div class="integration-icon integration-icon-placeholder"><i class="bi bi-hdd-network"></i></div>
+              <span>CDN Storage</span>
+            </div>
+            <div class="integration-chip">
+              <div class="integration-icon integration-icon-placeholder"><i class="bi bi-calculator"></i></div>
+              <span>MathJax</span>
+            </div>
+          </div>
+          <!-- Customer Case Studies -->
+          <div class="text-center mt-5 pt-4">
+            <span class="section-eyebrow">Customer Stories</span>
+            <h3 class="section-heading mb-4" style="font-size: 2rem">Trusted by tutoring partners</h3>
+          </div>
+          <div id="case-studies-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 11. FINAL CTA ========== -->
+    <section class="final-cta-section">
+      <div class="container" data-aos="fade-up">
+        <div class="text-center mb-5">
+          <h2 class="section-heading final-cta-heading">Ready to own the<br />entire student journey?</h2>
+          <p class="final-cta-subtitle">Join the educators who chose one platform to go from invisible to fully booked with 5-star reviews.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-5 col-md-6 col-12">
+            <div class="cta-card">
+              <div class="icon-container mx-auto mb-3"><i class="bi bi-briefcase"></i></div>
+              <h3>I'm an Educator</h3>
+              <p>Tutoring companies, schools, and independent educators</p>
+              <a href="/routes/contact" class="btn btnGradient">Book a Demo</a>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6 col-12">
+            <div class="cta-card">
+              <div class="icon-container mx-auto mb-3"><i class="bi bi-mortarboard"></i></div>
+              <h3>I'm a Student or Parent</h3>
+              <p>Get personalized tutoring powered by cutting-edge technology</p>
+              <a href="/routes/contact" class="btn btn-outline-glass final-cta-outline">Get Started</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Jersey Made Section -->
-    <section class="jersey-made-section-wrapper">
-      <div class="container-lg container-fluid scorgi-container glass-effect mb-lg-5 mb-4 p-lg-4 p-3" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-up">
-        <div class="row py-3 text-lg-start text-center" style="align-items: center">
-          <div class="col-lg-4 col-12 order-lg-1 order-2 mb-lg-0 text-lg-start text-center d-flex justify-content-center px-0">
-            <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website%2Fscorgi%2Fjersey-made.png" alt="Jersey Made" class="stripe-image img-fluid pt-3 px-lg-3" />
-          </div>
-          <div class="col-lg-8 col-12 order-lg-2 order-1 mb-lg-0 text-center p-4">
-            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Jersey Made</h3>
-            <p class="mb-0" style="font-size: 1.3rem">Made in NJ and already in use by hundreds of New Jersey's students, Scorgi sets a high bar for quality and performance. As we roll out to a global audience, rest assured that the rigorous standards upheld by Jersey students continue to drive our commitment to excellence.</p>
-          </div>
-        </div>
-        <!-- Industry Leaders Section -->
-        <div class="row">
-          <div class="col-12 text-center">
-            <div class="integrated-with-section">
-              <h5 class="integrated-with-title mb-4">
-                <i class="bi bi-lightning-charge-fill me-2"></i>
-                Integrated with Industry Leaders
-              </h5>
-              <div class="tech-partners-grid mb-4">
-                <div class="tech-partner-card">
-                  <div class="partner-logo-container">
-                    <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/stripeLogo.png" alt="Stripe - Payment Processing" class="partner-logo" />
-                  </div>
-                </div>
-                <div class="tech-partner-card">
-                  <div class="partner-logo-container">
-                    <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/twilioLogo.svg.png" alt="Twilio - Communications" class="partner-logo" />
-                  </div>
-                </div>
-                <div class="tech-partner-card">
-                  <div class="partner-logo-container">
-                    <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/digitalOceanLogo.png" alt="DigitalOcean - Cloud Infrastructure" class="partner-logo" />
-                  </div>
-                </div>
-                <div class="tech-partner-card">
-                  <div class="partner-logo-container">
-                    <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/poweredBy/chatGPTLogo.png" alt="ChatGPT Logo" class="partner-logo" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Video Demo Section -->
-    <section class="video-demo-section-wrapper d-none">
-      <div class="container-lg container-fluid scorgi-container glass-effect mb-lg-5 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-up">
-        <div class="row py-3 text-center">
-          <div class="col-12 px-3">
-            <h3 class="scorgi-header mb-4" style="font-weight: 500; font-family: 'Fredoka', sans-serif">See Scorgi in Action</h3>
-            <p style="font-size: 1.2rem">Watch how educators use Scorgi to transform their SAT<sup>®</sup> preparation process</p>
-
-            <!-- Video Container -->
-            <div class="video-demo-container">
-              <div class="video-thumbnail">
-                <img src="https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/demo/scorgi-platform-preview.png" alt="Scorgi Platform Demo" class="video-preview-image" />
-                <div class="video-play-overlay">
-                  <div class="play-button">
-                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                      <circle cx="30" cy="30" r="30" fill="rgba(255, 255, 255, 0.9)" />
-                      <path d="M23 20L23 40L40 30L23 20Z" fill="var(--brand-primary)" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="video-duration">3:45</div>
-              </div>
-
-              <!-- Video Features Highlights -->
-              <div class="row g-3 mt-4">
-                <div class="col-lg-3 col-md-6 col-12">
-                  <div class="demo-highlight">
-                    <div class="demo-icon">🎯</div>
-                    <p class="demo-text">Student Dashboard</p>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                  <div class="demo-highlight">
-                    <div class="demo-icon">📊</div>
-                    <p class="demo-text">Analytics Overview</p>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                  <div class="demo-highlight">
-                    <div class="demo-icon">📝</div>
-                    <p class="demo-text">Practice Test Flow</p>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                  <div class="demo-highlight">
-                    <div class="demo-icon">⚙️</div>
-                    <p class="demo-text">Admin Tools</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Success Stories Section -->
-    <section class="success-stories-section-wrapper d-none">
-      <div class="container-lg container-fluid scorgi-container glass-effect mb-lg-5 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-left">
-        <div class="row py-3 text-center">
-          <div class="col-12 px-3">
-            <h3 class="scorgi-header mb-4" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Student Success Stories</h3>
-            <p class="mb-4" style="font-size: 1.2rem">See how Scorgi has helped students achieve their SAT<sup>®</sup> goals</p>
-
-            <!-- Success Stories Grid - Component Placeholder -->
-            <div id="success-stories-container"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Comparison Table Section -->
-    <section class="comparison-section-wrapper d-none">
-      <div class="container-lg container-fluid scorgi-container glass-effect mb-lg-5 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-right">
-        <div class="row pt-3">
-          <div class="col-12 px-3">
-            <h3 class="scorgi-header mb-4 text-center" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Why Choose Scorgi?</h3>
-            <p class="text-center" style="font-size: 1.2rem">See how Scorgi compares to other solutions</p>
-
-            <!-- Comparison Table -->
-            <div class="comparison-table-container">
-              <div class="table-responsive">
-                <table class="comparison-table">
-                  <thead>
-                    <tr>
-                      <th class="feature-column text-center">Features</th>
-                      <th class="scorgi-column">
-                        <div class="provider-header scorgi-header-cell">
-                          <img src="./favicon.png" alt="Scorgi" class="provider-logo" />
-                          <span>Scorgi</span>
-                        </div>
-                      </th>
-                      <th class="competitor-column">Generic Platforms</th>
-                      <th class="competitor-column">Individual Tutoring</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="feature-name">Professional Educator Tools</td>
-                      <td class="scorgi-cell"><span class="check-yes">✓</span></td>
-                      <td class="competitor-cell"><span class="check-no">✗</span></td>
-                      <td class="competitor-cell"><span class="check-partial">~</span></td>
-                    </tr>
-                    <tr>
-                      <td class="feature-name">Real-Time Analytics</td>
-                      <td class="scorgi-cell"><span class="check-yes">✓</span></td>
-                      <td class="competitor-cell"><span class="check-partial">~</span></td>
-                      <td class="competitor-cell"><span class="check-no">✗</span></td>
-                    </tr>
-                    <tr>
-                      <td class="feature-name">Flexible Content Purchasing</td>
-                      <td class="scorgi-cell"><span class="check-yes">✓</span></td>
-                      <td class="competitor-cell"><span class="check-no">✗</span></td>
-                      <td class="competitor-cell"><span class="check-no">✗</span></td>
-                    </tr>
-                    <tr>
-                      <td class="feature-name">Multi-Student Management</td>
-                      <td class="scorgi-cell"><span class="check-yes">✓</span></td>
-                      <td class="competitor-cell"><span class="check-partial">~</span></td>
-                      <td class="competitor-cell"><span class="check-no">✗</span></td>
-                    </tr>
-                    <tr>
-                      <td class="feature-name">Schedule Integration</td>
-                      <td class="scorgi-cell"><span class="check-yes">✓</span></td>
-                      <td class="competitor-cell"><span class="check-no">✗</span></td>
-                      <td class="competitor-cell"><span class="check-partial">~</span></td>
-                    </tr>
-                    <tr>
-                      <td class="feature-name">White-Label Options</td>
-                      <td class="scorgi-cell"><span class="check-yes">✓</span></td>
-                      <td class="competitor-cell"><span class="check-no">✗</span></td>
-                      <td class="competitor-cell"><span class="check-no">✗</span></td>
-                    </tr>
-                    <tr>
-                      <td class="feature-name">Cost Effectiveness</td>
-                      <td class="scorgi-cell"><span class="check-yes">✓</span></td>
-                      <td class="competitor-cell"><span class="check-partial">~</span></td>
-                      <td class="competitor-cell"><span class="check-no">✗</span></td>
-                    </tr>
-                    <tr>
-                      <td class="feature-name">Scalability</td>
-                      <td class="scorgi-cell"><span class="check-yes">✓</span></td>
-                      <td class="competitor-cell"><span class="check-partial">~</span></td>
-                      <td class="competitor-cell"><span class="check-no">✗</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <!-- Call to Action -->
-            <div class="text-center mt-4 mb-2">
-              <p class="comparison-cta-text" style="font-size: 1.1rem; color: #666">Ready to experience the Scorgi difference?</p>
-              <button class="btn btnGradient">Contact Us!</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Platform Features Section -->
-    <section class="platform-features-section-wrapper">
-      <div class="container-lg container-fluid scorgi-container glass-effect mb-lg-5 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-right">
-        <div class="row py-3 text-center">
-          <div class="col-12 px-3">
-            <h3 class="scorgi-header mb-4" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Why Educators Choose Scorgi</h3>
-            <p style="font-size: 1.2rem">Advanced features designed for professional tutoring excellence</p>
-
-            <!-- Features Grid -->
-            <div class="row g-4">
-              <div class="col-lg-3 col-md-6 col-12">
-                <div class="feature-highlight-card h-100">
-                  <div class="feature-icon">📊</div>
-                  <h5>Real-Time Analytics</h5>
-                  <p>Track student performance with detailed insights and progress monitoring</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-12">
-                <div class="feature-highlight-card h-100">
-                  <div class="feature-icon">🎯</div>
-                  <h5>Targeted Practice</h5>
-                  <p>Focus on specific question types and difficulty levels that need improvement</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-12">
-                <div class="feature-highlight-card h-100">
-                  <div class="feature-icon">📅</div>
-                  <h5>Smart Scheduling</h5>
-                  <p>Efficiently manage multiple students with intelligent calendar integration</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-12">
-                <div class="feature-highlight-card h-100">
-                  <div class="feature-icon">🏆</div>
-                  <h5>College Board Aligned</h5>
-                  <p>All content matches official SAT<sup>®</sup> standards and scoring metrics</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Plans Section -->
-    <section class="pricing-plans-section-wrapper d-none">
-      <div class="container-lg container-fluid scorgi-container glass-effect mb-lg-5 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-up">
-        <div class="row py-3 text-center">
-          <div class="col-12 px-3">
-            <h3 class="scorgi-header mb-4" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Choose Your Plan</h3>
-            <p style="font-size: 1.2rem">Flexible pricing to meet every educator's needs</p>
-
-            <!-- Pricing Cards - Component Placeholder -->
-            <div id="pricing-cards-container"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section-wrapper d-none">
-      <div class="container-lg container-fluid scorgi-container glass-effect mb-lg-5 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-up">
-        <div class="row py-3">
-          <div class="col-12 px-3">
-            <h3 class="scorgi-header mb-4 text-center" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Frequently Asked Questions</h3>
-
-            <!-- FAQ Accordion - Component Placeholder -->
-            <div id="faq-accordion-container"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Us Section -->
-    <section class="contact-section-wrapper">
-      <div class="container-lg container-fluid scorgi-container glass-effect mb-lg-5 mb-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)" data-aos="fade-right">
-        <div class="row py-3 text-center">
-          <div class="px-3">
-            <h3 class="scorgi-header" style="font-weight: 500; font-family: 'Fredoka', sans-serif">Connect with Us</h3>
-            <p class="mb-0" style="font-size: 1.3rem">
-              Learn more about how the Scorgi platform can revolutionize your educational approach to the SAT<sup>®</sup>. Join us in our mission to enhance the tutoring experience and elevate student achievement.
-              <a href="/contact" style="text-decoration: none"><button class="btn btnGradient">Contact Us!</button></a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
-    <!-- AOS Library Script -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/ui/layout.mjs" type="module"></script>
-    <script src="./js/landing.mjs" type="module"></script>
+    <script src="/js/ui/layout.mjs" type="module"></script>
+    <script src="/js/pages/landing.mjs" type="module"></script>
   </body>
 </html>
