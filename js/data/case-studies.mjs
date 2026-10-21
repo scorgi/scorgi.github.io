@@ -87,7 +87,7 @@ export const CASE_STUDIES = {
       },
       solution: {
         heading: "One platform, built for the job",
-        body: "Foley Prep runs its entire operation on Scorgi: scheduling and payments across all seven locations, the proprietary question bank served through Scorgi's auto-graded test engine, white-label student dashboards under the Foley Prep brand, lead engagement via Thumper, automated review collection, and the full AI tutoring suite. The same platform Foley Prep depends on internally is what Scorgi makes available to other tutoring businesses.",
+        body: "Foley Prep runs its entire operation on Scorgi: scheduling and payments across all seven locations, the proprietary question bank served through Scorgi's auto-graded test engine, white-label student dashboards under the Foley Prep brand, lead engagement via Communications, automated review collection, and the full AI tutoring suite. The same platform Foley Prep depends on internally is what Scorgi makes available to other tutoring businesses.",
       },
       outcome: {
         heading: "A tutoring company that runs like a software company",

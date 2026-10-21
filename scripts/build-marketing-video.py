@@ -86,7 +86,7 @@ CHAPTERS = [
     {"rail": "Operations", "eyebrow": "OPERATIONS", "head": ("Run every location ", "from one screen."),
      "steps": [
          (A + "management-overview-2026-10.webp", "Today", "What needs attention, every morning", None, (0.0, 0.0, 1.0, 1.0)),
-         (A + "thumper-thread.webp", "Inbox", "Calls and texts in one inbox, with AI after hours", None, (0.0, 0.0, 1.0, 0.77)),
+         (A + "communications-thread.webp", "Inbox", "Calls and texts in one inbox, with AI after hours", None, (0.0, 0.0, 1.0, 0.77)),
          (A + "knowledge-base-2026-10.webp", "Knowledge", "Answers built from real client questions", None, (0.0, 0.0, 1.0, 0.85)),
      ]},
     {"rail": "Brand", "eyebrow": "WHITE-LABEL", "head": ("Your brand. ", "Your platform."),

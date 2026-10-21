@@ -22,7 +22,7 @@ export const BRAND = {
 export const PRODUCTS = [
   // Growth
   { icon: "bi-search", title: "SEO & GEO", shortTitle: "SEO", href: "/routes/seo-geo", category: "Growth" },
-  { icon: "bi-chat-dots", title: "Thumper", shortTitle: "Thumper", href: "/routes/thumper", category: "Growth" },
+  { icon: "bi-chat-dots", title: "Communications", shortTitle: "Communications", href: "/routes/communications", category: "Growth" },
   { icon: "bi-star", title: "Review Collection", shortTitle: "Reviews", href: "/routes/reviews", category: "Growth" },
   { icon: "bi-bell", title: "Notifications", shortTitle: "Notifications", href: "/routes/notifications", category: "Growth" },
 

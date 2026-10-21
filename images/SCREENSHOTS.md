@@ -43,8 +43,8 @@ Client names visible in `lead-pipeline.webp` and `commerce-open-carts.webp` are 
 | features — Review Collection | `foley-prep/testimonials-cards.webp` | Verified Google reviews wall |
 | reviews — SEO Flywheel | `foley-prep/reviews-wall.webp` | Six real Google reviews with ratings and score increases |
 | seo-geo — Review-to-SEO Loop | `foley-prep/reviews-wall.webp` | Same review wall — the content that feeds local ranking |
-| features — Thumper (Step 3) | `scorgi-app/thumper-thread.webp` | Real Thumper conversation with a Chati-handled call, recording + transcript (**contact names blurred**) |
-| thumper — Late-Night Lead | `scorgi-app/thumper-thread.webp` | Same capture |
+| features — Communications (Step 3) | `scorgi-app/communications-thread.webp` | Real Communications conversation with a Chati-handled call, recording + transcript (**contact names blurred**) |
+| communications — Late-Night Lead | `scorgi-app/communications-thread.webp` | Same capture |
 | features — SEO & GEO (Step 1) | `scorgi-app/ad-studio-analytics.webp` | Ad Studio analytics (dollar figures blurred) |
 | notifications — The Composer | `scorgi-app/message-blast.webp` | Message Blast composer + live email/SMS preview (no real recipients) |
 | test-engine — Score Reports | `foley-prep/score-results.webp` | Public live results: students improved, avg increase by exam, initial vs best (anonymized by the site itself) |
@@ -71,7 +71,7 @@ Two committed images carry deliberate blur, applied as a mask composite over the
   disclosing revenue.
 - `scorgi-app/chati-hub.webp` — contact names only. The app already renders message bodies as
   "[redacted message body — N characters]", so nothing else needed masking.
-- `scorgi-app/thumper-thread.webp` — contact names in the sidebar, thread header, and message
+- `scorgi-app/communications-thread.webp` — contact names in the sidebar, thread header, and message
   senders, plus one un-redacted body. Call durations, AI badges, transcript state and staff
   avatars are left readable.
 
@@ -119,7 +119,7 @@ are hidden in every shot.
 | `scorgi-app/client-booking-locations-2026-10.webp` | Family booking app: choose a location | None needed (public location photos) |
 | `scorgi-app/company-calendar-2026-10.webp` | Company Calendar, October 2026 | None needed (official test dates only); stuck "Loading" legend hidden |
 | `scorgi-app/management-overview-2026-10.webp` | Management Tools overview (needs attention / at a glance) | Every count and sidebar badge blurred |
-| `scorgi-app/knowledge-base-2026-10.webp` | Thumper Knowledge Base (/communication/thumper/knowledge): review queue, current entry, related-by-meaning | Generic FAQ entries only; automated email/phone scan of the page found none |
+| `scorgi-app/knowledge-base-2026-10.webp` | Communications Knowledge Base (/communication/thumper/knowledge): review queue, current entry, related-by-meaning | Generic FAQ entries only; automated email/phone scan of the page found none |
 | `scorgi-app/pto-balance-2026-10.webp` | PTO overview: balances + balance-over-time chart | Cropped above Balance Activity, which holds personal notes |
 | `scorgi-app/pto-request-2026-10.webp` | PTO request form | Empty form |
 | `scorgi-app/brand-kit-2026-10.webp` | Branding: Brand Kit logos | None needed |

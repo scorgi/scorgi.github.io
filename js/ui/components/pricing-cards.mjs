@@ -106,7 +106,7 @@ const defaultPlans = [
     features: [
       "Single-location platform access",
       "Practice tests + AI Suite",
-      "Lead engagement via Thumper",
+      "Instant lead engagement by text and call",
       "Insights & reporting",
     ],
     buttonText: "Book a Demo",

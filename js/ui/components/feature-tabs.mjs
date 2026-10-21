@@ -14,11 +14,11 @@ const defaultFeatures = [
   },
   {
     icon: "bi-chat-dots",
-    title: "Thumper",
+    title: "Communications",
     heading: "Respond to leads in under 60 seconds.",
-    description: "Instant SMS and voice responses to every new lead. Thumper engages prospects immediately, while they are still comparing options.",
-    image: "/images/scorgi-app/thumper-inbox.webp",
-    link: "/routes/thumper",
+    description: "Instant SMS and voice responses to every new lead. Scorgi engages prospects immediately, while they are still comparing options.",
+    image: "/images/scorgi-app/communications-inbox.webp",
+    link: "/routes/communications",
   },
   {
     icon: "bi-clipboard-check",

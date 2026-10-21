@@ -41,7 +41,7 @@ const defaultTools = [
     description:
       "Embeddings-powered Q&A over your handbook and policy entries. Describe a policy change and it finds every related entry by meaning, not just keywords.",
     image: "/images/scorgi-app/knowledge-base-2026-10.webp",
-    imageAlt: "Thumper Knowledge Base review queue: each question mined from client conversations gets a draft answer, tags, a confidence score, and related entries grouped by meaning",
+    imageAlt: "Communications Knowledge Base review queue: each question mined from client conversations gets a draft answer, tags, a confidence score, and related entries grouped by meaning",
   },
   {
     icon: "bi-lightning-charge",

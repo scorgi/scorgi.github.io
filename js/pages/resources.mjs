@@ -58,6 +58,8 @@ const renderNewsletters = () => {
     archiveLink.href = NEWSLETTERS_ARCHIVE_URL;
     archiveLink.textContent = `Browse All ${NEWSLETTERS_TOTAL} Issues`;
   }
+  const count = document.getElementById("newsletter-count");
+  if (count) count.textContent = `${NEWSLETTERS_TOTAL} issues and counting.`;
 };
 
 onReady();

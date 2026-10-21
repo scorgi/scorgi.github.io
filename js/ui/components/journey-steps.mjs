@@ -24,8 +24,8 @@ const defaultSteps = [
     number: 3,
     icon: "bi-chat-dots",
     title: "Engage Instantly",
-    label: "Thumper",
-    description: "Talk to every lead in under 60 seconds. Thumper sends instant SMS and voice responses so prospects hear from you before they even finish browsing competitors.",
+    label: "Communications",
+    description: "Talk to every lead in under 60 seconds. Scorgi sends instant SMS and voice responses so prospects hear from you before they even finish browsing competitors.",
     accent: "primary",
   },
   {
