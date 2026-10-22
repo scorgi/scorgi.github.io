@@ -88,7 +88,7 @@ async function initAOS() {
     await ensureScript(AOS_JS);
   }
   // @ts-expect-error
-  AOS.init({ duration: 600, easing: "ease-out", once: false, mirror: true, offset: 80 });
+  AOS.init({ duration: 800, easing: "ease-out-cubic", once: false, mirror: true, offset: 80 });
 }
 
 /**
@@ -100,7 +100,7 @@ export function refreshAOS() {
   // @ts-expect-error
   if (typeof AOS !== "undefined") {
     // @ts-expect-error
-    AOS.init({ duration: 600, easing: "ease-out", once: false, mirror: true, offset: 80 });
+    AOS.init({ duration: 800, easing: "ease-out-cubic", once: false, mirror: true, offset: 80 });
   }
 }
 

@@ -14,7 +14,7 @@ Client names visible in `lead-pipeline.webp` and `commerce-open-carts.webp` are 
 
 | Page / spot | Image | Shows |
 |---|---|---|
-| index hero | `scorgi-app/staff-dashboard.webp` | Staff dashboard — the Quick Links app grid (Users, Records, Tests, schedules, Insights, Content Creation, School Tracker, Benge, Management Tools, PTO) |
+| index hero | `scorgi-app/staff-dashboard.webp` | Staff dashboard — the Quick Links app grid (Users, Records, Tests, schedules, Insights, Content Creation, School Tracker, Benge, Management Tools, Employee Time Off) |
 | index — Management Dashboard row | `scorgi-app/management-overview-2026-10.webp` | Management Tools overview (needs-attention + at-a-glance) |
 | index — Content Creation row | `scorgi-app/content-creation-dashboard-2026-10.webp` | Content Creation dashboard (QA queue, tests) |
 | index — School Tracker row | `scorgi-app/school-search.webp` | School Tracker browse (1,037 colleges) |

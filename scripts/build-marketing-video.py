@@ -25,8 +25,8 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 FPS = 30
 STEP = 4.0          # seconds each walkthrough screen is held
-XFADE = 0.5         # crossfade between segments
-SLIDE = 0.55        # still screens slide in when the step changes
+XFADE = 0.9         # crossfade between segments (eased, never linear)
+DISSOLVE = 0.7      # step change: the old screen fades out to a blank window, then the new one fades in
 
 GREEN = (68, 202, 129)
 GREEN_DEEP = (20, 84, 52)
@@ -66,15 +66,15 @@ CHAPTERS = [
      ]},
     {"rail": "Booking", "eyebrow": "ONLINE BOOKING", "head": ("Families book ", "without a phone call."),
      "steps": [
-         ("clip:booking", "Location", "Families pick the location that suits them", ("clip", "Location", "Service", 0.0, 4.6), None),
+         ("clip:booking", "Location", "Families pick the location that suits them", ("clip", "Location", "Service", 0.0, 3.6), None),
          ("clip:booking", "Service", "Then the service: consultations, classes, mock exams, tutoring", ("clip", "Service", "Time", 0.0, 6.4), None),
          ("clip:booking", "Time", "Live availability, with the tutors families already know", ("clip", "Time", None, 0.0, 5.4), None),
      ]},
     {"rail": "Schedule", "eyebrow": "STAFF SCHEDULING", "head": ("Your whole team's week, ", "in one view."),
      "steps": [
-         ("clip:schedule", "Day", "Every tutor, class, and mock exam for the day", ("clip", "Day", "Week", 0.0, 5.6), None),
-         ("clip:schedule", "Week", "The full week across your team", ("clip", "Week", "Class", 0.0, 7.2), None),
-         ("clip:schedule", "Class", "Open any class to see the roster and who has paid", ("clip", "Class", None, 0.3, 6.2), None),
+         ("clip:schedule", "Day", "Every tutor, class, and mock exam for the day", ("clip", "Day", "Week", 0.0, 5.3), None),
+         ("clip:schedule", "Week", "The full week across your team", ("clip", "Week", "Class", 0.0, 5.6), None),
+         ("clip:schedule", "Class", "Open any class to see the roster and who has paid", ("clip", "Class", None, 0.3, 6.4), None),
      ]},
     {"rail": "Front desk", "eyebrow": "KIOSK & TIME CLOCK", "head": ("Kiosk check-in ", "and time clock."),
      "steps": [
@@ -121,7 +121,7 @@ AD_CHAPTERS = [
      ]},
     {"rail": "Schedule", "eyebrow": "STAFF SCHEDULING", "head": ("Your whole team's week, ", "in one view."),
      "steps": [
-         ("clip:schedule", "Week", "Every tutor and class across the week", ("clip", "Week", "Class", 0.8, 4.4), None),
+         ("clip:schedule", "Week", "Every tutor and class across the week", ("clip", "Week", "Class", 0.6, 5.0), None),
      ]},
     {"rail": "Front desk", "eyebrow": "KIOSK & TIME CLOCK", "head": ("Kiosk check-in ", "and time clock."),
      "steps": [
@@ -140,9 +140,17 @@ TOOLS = ["Scheduling app", "Test platform", "Spreadsheets", "Texting app", "Paym
 PROOF = [("20,000+", "students trained", 20000, "+"), ("46,000+", "tests graded", 46000, "+"),
          ("7", "New Jersey locations", 7, ""), ("4.9", "Google rating", 4.9, "")]
 
-OPEN, PROBLEM, PROOF_T, CTA = 4.6, 6.0, 6.0, 7.0
-CARD = 3.9          # section title card before each chapter (text readable for ~2.5s)
+OPEN, PROBLEM, PROOF_T, CTA = 5.0, 6.4, 6.4, 7.4
+CARD = 4.3          # section title card before each chapter (text readable for ~2.5s)
 MIN_STEP = 5.0      # shortest time any step stays on screen
+# Recorded interactions play faster than real time so nobody waits on a cursor; marks and
+# (start, max) in each step stay in the clip's own seconds.
+CLIP_SPEED = {"booking": 1.15, "schedule": 1.15}
+DEFAULT_SPEED = 1.3
+
+
+def speed(name):
+    return CLIP_SPEED.get(name, DEFAULT_SPEED)
 FORMATS = {"wide": (1920, 1080), "square": (1080, 1080), "vertical": (1080, 1920)}
 FONT_URLS = {
     "Outfit.ttf": "https://github.com/google/fonts/raw/main/ofl/outfit/Outfit%5Bwght%5D.ttf",
@@ -184,6 +192,18 @@ def ease(t):
 def ease_io(t):
     t = clamp(t)
     return 3 * t * t - 2 * t * t * t
+
+
+def ease_soft(t):
+    """Quintic smootherstep: starts and lands more gently than ease_io."""
+    t = clamp(t)
+    return t * t * t * (t * (6 * t - 15) + 10)
+
+
+def ease_glide(t):
+    """Cubic ease-in-out for screen-to-screen moves."""
+    t = clamp(t)
+    return 4 * t ** 3 if t < 0.5 else 1 - (-2 * t + 2) ** 3 / 2
 
 
 def ramp(t, start, length):
@@ -426,7 +446,27 @@ def step_footage(step):
     marks = dict(meta["marks"])
     a = marks[mode[1]] + (mode[3] if len(mode) > 3 else 0)
     d = (marks[mode[2]] if mode[2] else meta["duration"]) - a
-    return min(d, mode[4]) if len(mode) > 4 else d
+    d = min(d, mode[4]) if len(mode) > 4 else d
+    return d / speed(src[5:])
+
+
+def step_source(step):
+    """(clip name, first source second, source seconds played) for a clip step, else None."""
+    src, _, _, mode, _ = step
+    if not src.startswith("clip:"):
+        return None
+    name = src[5:]
+    a = dict(clip_meta(name)["marks"])[mode[1]] + (mode[3] if len(mode) > 3 else 0)
+    return name, a, step_footage(step) * speed(name)
+
+
+def continues(prev, prev_dur, step):
+    """True when `step` plays on from the exact frame where `prev` stopped."""
+    p, c = step_source(prev), step_source(step)
+    if not p or not c or p[0] != c[0]:
+        return False
+    held = prev_dur - p[2] / speed(p[0]) > 0.1
+    return not held and abs(p[1] + p[2] - c[1]) < 0.2
 
 
 def steps_timed(ch):
@@ -663,7 +703,7 @@ def caption_chip(text, num, L):
 
 def chapter_len(ch, A=None):
     last = steps_timed(ch)[-1]
-    return last[0] + last[1] + 0.6
+    return last[0] + last[1] + 1.0
 
 
 def seg_chapter(A, i, t):
@@ -703,18 +743,20 @@ def seg_chapter(A, i, t):
         if src.startswith("clip:"):
             name = src[5:]
             start = dict(A.clips[name]["marks"])[mode[1]] + (mode[3] if len(mode) > 3 else 0)
-            return A.clip_frame(name, start + min(lt, step_footage(ch["steps"][j]) - 1 / FPS), bw, bh)
+            return A.clip_frame(name, start + min(lt, step_footage(ch["steps"][j]) - 1 / FPS) * speed(name), bw, bh)
         return frame_still(A.images[src], bw, bh, view)
 
     shot = render_step(cur, st)
-    # stills slide in; consecutive steps of the same recording just keep playing
-    if cur > 0 and st < SLIDE and not (ch["steps"][cur][0] == ch["steps"][cur - 1][0] and ch["steps"][cur][0].startswith("clip:") and len(ch["steps"][cur][3]) == 3):
-        prev = render_step(cur - 1, timed[cur - 1][1])
-        kk = ease_io(st / SLIDE)
-        both = Image.new("RGB", (bw, bh))
-        both.paste(prev, (int(-bw * kk), 0))
-        both.paste(shot, (int(bw * (1 - kk)), 0))
-        shot = both
+    # A step that picks up exactly where the last one stopped just keeps playing; any jump
+    # (another recording, a still, skipped footage, or a held last frame) dips through a blank
+    # window, so two busy screens are never superimposed.
+    if cur > 0 and st < DISSOLVE and not continues(ch["steps"][cur - 1], timed[cur - 1][1], ch["steps"][cur]):
+        k = st / DISSOLVE
+        blank = Image.new("RGB", (bw, bh), (246, 248, 247))
+        if k < 0.5:
+            shot = Image.blend(render_step(cur - 1, timed[cur - 1][1]), blank, ease_soft(k * 2))
+        else:
+            shot = Image.blend(blank, shot, ease_soft(k * 2 - 1))
     window = card.copy()
     window.paste(shot, (content[0], content[1]))
     window.putalpha(ImageChops.multiply(window.getchannel("A"), mask))
@@ -954,7 +996,7 @@ def compose(A, t):
     if len(live) == 1:
         return render_seg(A, live[0][0], live[0][1])
     (k1, t1, _), (k2, t2, _) = live[0], live[-1]
-    return Image.blend(render_seg(A, k1, t1), render_seg(A, k2, t2), ease_io(t2 / XFADE))
+    return Image.blend(render_seg(A, k1, t1), render_seg(A, k2, t2), ease_soft(t2 / XFADE))
 
 
 def build(name, size):
@@ -1013,8 +1055,8 @@ def use_ad_cut():
     """python3 scripts/build-marketing-video.py --ad [formats]  ->  videos/scorgi-ad-*.mp4"""
     global AD, CHAPTERS, PROBLEM, PROOF_T, CTA, PREFIX, POSTER_T, CARD, MIN_STEP
     AD, CHAPTERS = True, AD_CHAPTERS
-    CARD, MIN_STEP = 3.1, 4.6
-    PROBLEM, PROOF_T, CTA = 5.0, 4.6, 6.2
+    CARD, MIN_STEP = 3.5, 4.6
+    PROBLEM, PROOF_T, CTA = 5.4, 5.0, 6.6
     PREFIX, POSTER_T = "scorgi-ad", 4.6
 
 

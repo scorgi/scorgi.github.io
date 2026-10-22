@@ -118,7 +118,7 @@ const defaultFeatures = [
   },
   {
     icon: "bi-calendar2-heart",
-    title: "PTO System",
+    title: "Employee Time Off System",
     heading: "Staff leave management on autopilot.",
     description: "Dual vacation and sick day tracking with automatic accrual, balance projections, request workflows, sick-to-PTO fallback, coverage credits, and usage analytics. Approved time off auto-creates schedule unavailability.",
     image: "/images/scorgi-app/pto-balance-2026-10.webp",

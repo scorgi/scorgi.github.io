@@ -231,21 +231,14 @@ def insights(b):
 REDACT_LIVE = r"""
 (() => {
   const run = () => {
-    // Only client data is sensitive: the account holder ("Booking as") and their students.
-    // Tutor names and photos are public on foleyprep.com/team, so they stay visible.
-    const label = [...document.querySelectorAll('body *')].find(e => !e.children.length && /^Booking as$/.test((e.innerText || '').trim()));
-    if (label) {
-      let box = label.parentElement;
-      while (box && box.getBoundingClientRect().height < 40) box = box.parentElement;   // the small account chip
-      if (box && box.getBoundingClientRect().height < 120) for (const el of box.querySelectorAll('*'))
-        if ((el.tagName === 'IMG' || (!el.children.length && el !== label)) && !/^Booking as$/.test((el.innerText||'').trim())) el.style.filter = 'blur(6px)';
-    }
-    // student / family names on the Welcome page ("Switch to X" cards, avatars with initials)
-    const names = new Set(['Robert']);
+    // Only student data is sensitive. The "Booking as" chip is Rob's own account and stays visible;
+    // tutor names and photos are public on foleyprep.com/team.
+    // student / family names on the Welcome page ("Switch to X" cards)
+    const names = new Set();
     for (const m of (document.body.innerText || '').matchAll(/Switch to ([^\n]+)/g)) for (const w of m[1].trim().split(/\s+/)) if (w.length > 1) names.add(w);
     for (const el of document.querySelectorAll('body *')) { if (el.children.length) continue; const t = (el.innerText || '').trim();
       if (!t) continue;
-      if ([...names].some(n => t.includes(n)) || /^[A-Z]$/.test(t)) el.style.filter = 'blur(6px)'; }
+      if (names.size && [...names].some(n => t.includes(n))) el.style.filter = 'blur(6px)'; }
   };
   addEventListener('DOMContentLoaded', () => {
     const s = document.createElement('style'); s.textContent = '#navbar,header.sticky-top,.navbarPosition,footer,#chat-widget,#chati-teaser,#chati-restore-tab{display:none!important}';
@@ -263,17 +256,18 @@ def booking(b):
         pg.locator('text=Change location >> visible=true').first.click(); pg.wait_for_timeout(2500)
     r = Recorder(pg); r.start()
     r.mark('Location')
-    r.wait(0.6)
-    r.click(pg.locator('text=Bell Works Holmdel >> visible=true').first, 1.0); r.wait(2.4)
-    r.mark('Service')
-    r.click(pg.locator('text=Consultations >> visible=true').first, 0.9); r.wait(1.6)
-    r.click(pg.locator('text=Post Diagnostic Planning >> visible=true').first, 0.9); r.wait(2.4)
+    r.glide(W * 0.45, H * 0.55, 0.9); r.wait(0.9)                 # look over the locations first
+    r.click(pg.locator('text=Bell Works Holmdel >> visible=true').first, 0.7); r.wait(0.5)
+    r.mark('Service')                                              # the Welcome page belongs to the next step
+    r.wait(1.1)
+    r.click(pg.locator('text=Consultations >> visible=true').first, 0.55); r.wait(1.0)
+    r.click(pg.locator('text=Post Diagnostic Planning >> visible=true').first, 0.55); r.wait(1.7)
     r.mark('Time')
-    r.glide(W * 0.55, H * 0.7, 0.8)
+    r.glide(W * 0.55, H * 0.7, 0.5)
     for _ in range(12):
-        pg.mouse.wheel(0, 26); pg.wait_for_timeout(45)
-    r.wait(0.8)
-    r.click(pg.locator('text=Pick a tutor >> visible=true').first, 0.9); r.wait(2.0)
+        pg.mouse.wheel(0, 26); pg.wait_for_timeout(35)
+    r.wait(0.5)
+    r.click(pg.locator('text=Pick a tutor >> visible=true').first, 0.6); r.wait(2.0)
     r.stop('booking')
     print(' non-booking writes:', writes)
     pg.context.close()
@@ -710,47 +704,40 @@ def schools(b):
 
 
 def schedule(b):
-    # The cursor never rests on or crosses an availability block (hovering one triggers a layout bug).
-    NO_AVAIL_HOVER = """setInterval(()=>{for(const e of document.querySelectorAll('body *')){ if(!e.children.length && /^A: /.test((e.innerText||'').trim())){
-        let c=e; for(let k=0;k<6 && c;k++){ if(getComputedStyle(c).position==='absolute'){ c.style.pointerEvents='none'; break;} c=c.parentElement; } } } }, 150)"""
+    # Haddonfield, Sun 10/25: four tutors, classes all day, and a demo class roster (5 "<Name> Demo"
+    # students added on dev). Changing the span reloads the grid by itself, so Refresh is never clicked.
+    # The cursor stays in the time gutter and filter bar, off the availability blocks.
     pg = new_page(b, storage='dev-session.json', init=DEV_CHROME)
-    pg.context.add_init_script(NO_AVAIL_HOVER)
     pg.goto('https://dev.foleyprep.com/apps/schedule-staff/', wait_until='commit', timeout=90000)
-    pg.wait_for_selector('select', timeout=120000); pg.wait_for_timeout(3000)
+    pg.wait_for_selector('select', timeout=120000)
+    pg.wait_for_function("[...document.querySelectorAll('select option')].some(o=>o.text==='Haddonfield')", timeout=120000); pg.wait_for_timeout(1500)
     s_ = pg.locator('select:visible')
-    s_.nth(0).select_option(label='Daily'); s_.nth(1).select_option(label='Bell Works Holmdel')
-    pg.locator('input[type=date]:visible').first.fill('2026-10-24'); pg.locator('button:has-text("Refresh")').first.click(); pg.wait_for_timeout(5000)
+    s_.nth(0).select_option(label='Daily'); s_.nth(1).select_option(label='Haddonfield')
+    pg.locator('input[type=date]:visible').first.fill('2026-10-25'); pg.locator('button:has-text("Refresh")').first.click(); pg.wait_for_timeout(5000)
     gutter_x = pg.evaluate("()=>{const xs=[...document.querySelectorAll('body *')].filter(e=>!e.children.length && /^\\d{1,2}:\\d{2} [AP]M$/.test((e.innerText||'').trim())).map(e=>{const b=e.getBoundingClientRect(); return b.width ? b.left+b.width/2 : 1e9}); return Math.min(...xs)}")
-    print(' gutter', gutter_x)
     r = Recorder(pg); r.mouse = (gutter_x, H * 0.85); r.start()
     r.mark('Day')
-    r.glide(gutter_x, H * 0.62, 0.9); r.wait(1.0)
-    smooth_scroll(pg, r, 220, 2.0); r.wait(1.4)
-    smooth_scroll(pg, r, -220, 1.4); r.wait(0.4)
+    r.glide(gutter_x, H * 0.62, 0.6); r.wait(0.6)
+    smooth_scroll(pg, r, 220, 1.4); r.wait(0.9)
+    smooth_scroll(pg, r, -220, 1.0); r.wait(0.2)
     r.mark('Week')
     span = pg.locator('select:visible').nth(0)
     sb = span.bounding_box()
-    r.glide(gutter_x, sb['y'] + sb['height'] / 2, 0.6)          # up the time column, then across the filter bar
-    r.click(span, 0.7); span.select_option(label='Weekly'); r.wait(0.4)
-    pg.locator('input[type=date]:visible').first.fill('2026-10-19')
-    r.click(pg.locator('button:has-text("Refresh")').first, 0.8); r.wait(3.6)
-    rb = pg.locator('button:has-text("Refresh")').first.bounding_box()
-    r.glide(rb['x'] + rb['width'] / 2, rb['y'] - 26, 0.6); r.wait(1.8)   # rest above the grid
+    r.glide(gutter_x, sb['y'] + sb['height'] / 2, 0.45)          # up the time column, then across the filter bar
+    r.click(span, 0.5); span.select_option(label='Weekly'); r.wait(3.4)
     span = pg.locator('select:visible').nth(0)
-    r.click(span, 0.7); span.select_option(label='Daily'); r.wait(0.3)
-    pg.locator('input[type=date]:visible').first.fill('2026-10-24')
-    r.click(pg.locator('button:has-text("Refresh")').first, 0.7); r.wait(3.4)
+    r.click(span, 0.5); span.select_option(label='Daily'); r.wait(2.6)
     r.mark('Class')
     pt = pg.evaluate("""()=>{const els=[...document.querySelectorAll('body *')].filter(e=>!e.children.length && /^C: /.test((e.innerText||'').trim()));
         let best=null, bestN=0;
-        for (const e of els){const b=e.getBoundingClientRect(); if(!(b.top>140 && b.bottom<innerHeight-60 && b.width>20)) continue;
+        for (const e of els){const b=e.getBoundingClientRect(); if(!(b.top>140 && b.bottom<innerHeight-30 && b.width>20)) continue;
           let c=e; for(let i=0;i<8 && c;i++){ const m=(c.innerText||'').match(/(\\d+)\\s*\\/\\s*(\\d+)/); if(m){ const n=+m[1]; if(n>bestN){bestN=n; best=[b.left+b.width/2, b.top+b.height/2];} break;} c=c.parentElement; } }
         return best}""")
     print(' class at', pt)
     if pt:
-        r.glide(gutter_x, pt[1], 0.7)                            # down the time column to the card's row
-        click_xy(pg, r, pt[0], pt[1], 0.7); r.wait(3.6)
-        r.glide(W * 0.5, H * 0.55, 0.9); r.wait(2.0)
+        r.glide(gutter_x, pt[1], 0.5)                            # down the time column to the card's row
+        click_xy(pg, r, pt[0], pt[1], 0.5); r.wait(3.0)
+        r.glide(W * 0.5, H * 0.55, 0.6); r.wait(1.6)
     r.stop('schedule')
     pg.context.close()
 

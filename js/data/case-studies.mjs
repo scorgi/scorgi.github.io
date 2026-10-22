@@ -11,12 +11,12 @@
  *   2. Copy /routes/case-studies/foley-prep/index.html to a new folder named
  *      after the slug; change title, description, and case-study-slug meta.
  *
- * Page layout (clean, three image zones):
- *   1. Hero          — partner logo + title + subtitle + brand link
- *   2. Tutoring photo — single feature image of real tutoring (full-width)
- *   3. Stats          — 3–4 numbers in one consistent row
- *   4. Story          — Challenge / Solution / Outcome as plain prose
- *   5. Platform       — 2×2 grid of Scorgi screenshots they actually use
+ * Page layout:
+ *   1. Hero          — partner logo, title, subtitle, links, and the tutoring photo
+ *   2. Stats          — 3–4 numbers in a band under the hero
+ *   3. Programs       — the exams and subjects they teach, as chips
+ *   4. Story          — Challenge / Solution / Outcome as three cards
+ *   5. Platform       — grid of Scorgi screenshots they actually use
  *   6. Final CTA
  *
  * Anything left undefined is skipped. No fabricated content ever ships.
@@ -35,7 +35,8 @@
  *   teaser?: string,
  *   pageTitle: string,
  *   pageDescription: string,
- *   hero: { title: string, subtitle: string },
+ *   hero: { title: string, accent?: string, subtitle: string },
+ *   programs?: string[],
  *   tutoringImage?: TutoringImage,
  *   stats?: StatItem[],
  *   story?: { challenge?: StorySection, solution?: StorySection, outcome?: StorySection },
@@ -61,9 +62,12 @@ export const CASE_STUDIES = {
     pageTitle: "Scorgi - Foley Prep Case Study",
     pageDescription: "How Foley Prep — a 7-location New Jersey tutoring company that has trained 20,000+ students since 2013 — runs its entire operation on Scorgi.",
     hero: {
-      title: "How Foley Prep runs on Scorgi",
+      title: "How Foley Prep runs on",
+      accent: "Scorgi",
       subtitle: "Seven locations. Sixteen exams. Twenty thousand students. One platform built for the job.",
     },
+    // Exams and subjects, from the challenge copy below (foleyprep.com).
+    programs: ["SAT", "PSAT", "ACT", "MCVSD", "SSAT", "ISEE", "HSPT", "GMAT", "GRE", "MCAT", "DAT", "AP subjects"],
     // Tutoring photo — single feature image. When `src` is undefined the
     // renderer shows a tasteful placeholder so the layout still flows; once
     // a real photo is uploaded to the CDN, set `src` and the placeholder
@@ -94,17 +98,17 @@ export const CASE_STUDIES = {
         body: "Foley Prep continues to expand without the operational drag that caps most tutoring businesses at three or four locations. The numbers on this page are self-reported on foleyprep.com (reviewed October 2026).",
       },
     },
-    // 4 product screenshots Foley Prep actually uses, in a 2×2 grid
+    // Product screenshots Foley Prep actually uses (captured October 2026, client data blurred)
     platformImages: [
       {
-        title: "Multi-Location Scheduling",
+        title: "Multi-Location Booking",
         src: "/images/scorgi-app/client-booking-locations-2026-10.webp",
         caption: "Families choose any of Foley Prep's locations, then book classes, mock exams, and consultations.",
       },
       {
         title: "Practice Test Engine",
-        src: "https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-goja.png",
-        caption: "30,000+ proprietary questions delivered with auto-grading and topic analytics.",
+        src: "/images/foley-prep/test-demo-question-2026-10.webp",
+        caption: "30,000+ proprietary questions, delivered with test-day tools and auto-grading.",
       },
       {
         title: "Insights & Worksheets",
@@ -112,9 +116,19 @@ export const CASE_STUDIES = {
         caption: "Every topic sorted Beginner to Mastery, ranked by the points at stake. Public example data.",
       },
       {
-        title: "Commerce & 529 Payments",
-        src: "https://foleyprep.nyc3.cdn.digitaloceanspaces.com/Website/scorgi/features/scorgi-pricing-model.png",
-        caption: "Stripe-backed checkout, package management, and 529 plan support.",
+        title: "Staff Scheduling",
+        src: "/images/scorgi-app/scorgi-schedule-staff-2026-10.webp",
+        caption: "Every tutor, class, and mock exam across the locations, by day or by week.",
+      },
+      {
+        title: "Front Desk Kiosk",
+        src: "/images/scorgi-app/kiosk-check-in-2026-10.webp",
+        caption: "Students check themselves in on the lobby kiosk; staff see the count update live.",
+      },
+      {
+        title: "Management Dashboard",
+        src: "/images/scorgi-app/management-overview-2026-10.webp",
+        caption: "Session requests, payments, time off, and retention in one place for the leadership team.",
       },
     ],
     // quote: {} — pending Dr. Ron Foley sign-off; renderer skips when undefined.

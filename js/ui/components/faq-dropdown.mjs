@@ -71,7 +71,7 @@ export const renderFAQAccordion = (containerId, customFAQs = null, customAccordi
 const defaultFAQs = [
   {
     question: "How does Scorgi differ from platforms like Noto?",
-    answer: "Tools like Noto, Teachworks, and TutorCruncher focus on running lessons: scheduling, billing, and client communication. Scorgi does that too, and adds the teaching and growth layer: a built-in practice-test engine, topic-level progress boards and parent summaries, SEO and lead intake, Communications for lead engagement, and review collection. Plus a management dashboard, content creation tools, Kanban boards, PTO tracking, and built-in AI tools.",
+    answer: "Tools like Noto, Teachworks, and TutorCruncher focus on running lessons: scheduling, billing, and client communication. Scorgi does that too, and adds the teaching and growth layer: a built-in practice-test engine, topic-level progress boards and parent summaries, SEO and lead intake, Communications for lead engagement, and review collection. Plus a management dashboard, content creation tools, Kanban boards, employee time off tracking, and built-in AI tools.",
   },
   {
     question: "What does the Insights Dashboard show?",

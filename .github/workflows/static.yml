@@ -9,10 +9,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-  # Daily redeploy so the Newsletters page picks up new Foley Prep issues
-  schedule:
-    - cron: "0 13 * * *"
-
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -37,13 +33,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: Refresh newsletters
-        # Keep the committed snapshot if the feed is unreachable, so a deploy never fails on it.
-        run: node scripts/update-newsletters.mjs || echo "Newsletter feed unavailable; keeping the existing snapshot."
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -39,7 +39,7 @@ export const PRODUCTS = [
   { icon: "bi-pencil-square", title: "Content Creation", shortTitle: "Content", href: "/routes/content-creation", category: "Business" },
   { icon: "bi-palette", title: "White-Label", shortTitle: "White-Label", href: "/routes/white-label", category: "Business" },
   { icon: "bi-kanban", title: "Benge Kanban", shortTitle: "Benge", href: "/routes/benge", category: "Business" },
-  { icon: "bi-calendar2-heart", title: "PTO System", shortTitle: "PTO", href: "/routes/pto", category: "Business" },
+  { icon: "bi-calendar2-heart", title: "Employee Time Off System", shortTitle: "Time Off", href: "/routes/pto", category: "Business" },
   { icon: "bi-tablet-landscape", title: "Kiosk & Time Clock", shortTitle: "Kiosk", href: "/routes/kiosk", category: "Business" },
   { icon: "bi-megaphone", title: "Product Updates", shortTitle: "Updates", href: "/routes/product-updates", category: "Business" },
 ];
@@ -65,7 +65,6 @@ export const NAV_LINKS = [
   { label: "Case Studies", href: "/routes/case-studies/" },
   { label: "Testimonials", href: "/routes/testimonials" },
   { label: "Pricing", href: "/routes/pricing" },
-  { label: "Newsletters", href: "/routes/resources" },
 ];
 
 // ─── Mobile-Only Nav Links (shown at top of offcanvas) ───────────────────────
@@ -75,7 +74,6 @@ export const MOBILE_NAV_LINKS = [
   { icon: "bi-buildings", label: "Case Studies", href: "/routes/case-studies/" },
   { icon: "bi-chat-quote", label: "Testimonials", href: "/routes/testimonials" },
   { icon: "bi-tag", label: "Pricing", href: "/routes/pricing" },
-  { icon: "bi-journal-text", label: "Newsletters", href: "/routes/resources" },
   { icon: "bi-envelope", label: "Contact", href: "mailto:info@scorgi.com" },
 ];
 
@@ -95,7 +93,6 @@ export const FOOTER_COMPANY_LINKS = [
   { label: "Case Studies", href: "/routes/case-studies/" },
   { label: "Testimonials", href: "/routes/testimonials" },
   { label: "Pricing", href: "/routes/pricing" },
-  { label: "Newsletters", href: "/routes/resources" },
   { label: "Compare", href: "/routes/scorgi-vs-competitors" },
   { label: "Product Updates", href: "/routes/product-updates" },
   { label: "Book a Demo", href: "/routes/contact" },

@@ -9,7 +9,7 @@ import { renderCaseStudies } from "../ui/components/case-study-cards.mjs";
 
 const educatorCards = [
   { icon: "bi-kanban", title: "Benge — Kanban Boards", description: "Built-in project management with drag-and-drop cards, real-time WebSocket collaboration, due dates, checklists, comments, Gantt chart view, and Slack integration. Your team's tasks and the tutoring schedule in one platform." },
-  { icon: "bi-calendar2-heart", title: "PTO System", description: "Dual vacation and sick day tracking with automatic accrual, balance projections, request workflows with admin approval, sick-to-PTO fallback, coverage credits, and usage analytics. Approved time off auto-creates schedule unavailability." },
+  { icon: "bi-calendar2-heart", title: "Employee Time Off System", description: "Dual vacation and sick day tracking with automatic accrual, balance projections, request workflows with admin approval, sick-to-PTO fallback, coverage credits, and usage analytics. Approved time off auto-creates schedule unavailability." },
   { icon: "bi-bell", title: "Notifications & Message Blast", description: "Four-channel automated notifications plus Message Blast — a built-in campaign tool with session-based targeting, query builder, AI content analysis, and dual email/SMS delivery. No Mailchimp needed." },
   { icon: "bi-palette", title: "White-Label Platform", description: "Your logo, colors, and domain. Multi-location management with GPS, role-based permissions (Admin, Manager, Staff, Client), and staff accounts. Give clients a seamless branded experience without writing code." },
 ];

@@ -74,9 +74,18 @@ function buildSpotlight(cs) {
         </div>`
           : ""
       }
+      ${
+        cs.platformImages?.length
+          ? `
+        <div class="cs-spotlight-modules">
+          <span class="cs-spotlight-modules-label">Runs on Scorgi</span>
+          ${cs.platformImages.map((p) => `<span class="cs-chip cs-chip-sm">${p.title}</span>`).join("")}
+        </div>`
+          : ""
+      }
       <div class="cs-spotlight-actions">
         <a href="/routes/case-studies/${cs.slug}" class="btn btnGradient">
-          Read More <i class="bi bi-arrow-right ms-2"></i>
+          Read the Story <i class="bi bi-arrow-right ms-2"></i>
         </a>
       </div>
     </div>

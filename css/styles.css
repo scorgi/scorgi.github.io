@@ -3160,56 +3160,77 @@ a.error-card-link {
    a 2×2 grid of platform screenshots. */
 
 /* --- Section rhythm --- */
-.cs-hero,
-.cs-tutoring,
 .cs-story,
 .cs-platform-section,
 .cs-quote,
 .cs-pdf {
-  padding: 5rem 0;
-}
-.cs-hero {
-  padding: 7rem 0 4rem;
+  padding: 5.5rem 0;
 }
 
-/* --- Hero — single column by default; two-column when stats are present --- */
+/* --- Hero: story left, tutoring photo right --- */
+.cs-hero {
+  padding: 8rem 0 3rem;
+  background:
+    radial-gradient(60% 70% at 85% 30%, rgba(68, 202, 129, 0.12), transparent 70%),
+    radial-gradient(50% 60% at 10% 90%, rgba(249, 142, 82, 0.08), transparent 70%);
+}
 .cs-hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
-}
-.cs-hero-with-stats .cs-hero-grid {
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 4rem;
+  gap: 3rem;
   align-items: center;
 }
-
+.cs-hero-grid-photo {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 4rem;
+}
 .cs-hero-content {
-  max-width: 720px;
+  max-width: 620px;
+}
+.cs-hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+.cs-hero-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  flex-shrink: 0;
 }
 .cs-hero-logo {
   display: block;
-  max-height: 64px;
-  max-width: 220px;
+  max-width: 56px;
+  max-height: 56px;
   object-fit: contain;
-  margin: 1.25rem 0 1.75rem;
 }
 .cs-hero-title {
   font-family: "Outfit", sans-serif;
-  font-weight: 700;
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  font-size: clamp(2.4rem, 5vw, 3.9rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
   color: #1d1d1f;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.25rem 0;
 }
 .cs-hero-subtitle {
   font-size: 1.2rem;
-  line-height: 1.55;
-  color: #6e6e73;
-  font-weight: 400;
-  max-width: 600px;
-  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+  color: #55555a;
+  margin: 0 0 2rem 0;
+}
+.cs-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
 }
 .cs-hero-link {
   display: inline-flex;
@@ -3217,240 +3238,293 @@ a.error-card-link {
   gap: 0.4rem;
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--brand-primary);
+  color: var(--brand-primary-dark, #1f8a52);
   text-decoration: none;
   transition: gap 200ms ease;
 }
 .cs-hero-link:hover {
   gap: 0.65rem;
-  color: var(--brand-primary-dark);
 }
-
-/* --- Tutoring photo (side-by-side: framed photo + prominent caption) --- */
-.cs-tutoring {
-  padding: 4rem 0;
-}
-.cs-tutoring-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  gap: 3.5rem;
-  align-items: center;
-}
-.cs-tutoring-frame {
-  border-radius: 18px;
+.cs-hero-photo {
+  position: relative;
+  margin: 0;
+  border-radius: 24px;
   overflow: hidden;
-  background: #f5f5f7;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 4 / 3;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  aspect-ratio: 5 / 4;
+  box-shadow: 0 30px 60px -20px rgba(20, 84, 52, 0.35), 0 12px 24px rgba(0, 0, 0, 0.08);
 }
-.cs-tutoring-image {
+.cs-hero-photo img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.cs-tutoring-frame-placeholder {
-  display: flex;
-  flex-direction: column;
+.cs-hero-photo figcaption {
+  position: absolute;
+  left: 1.1rem;
+  bottom: 1.1rem;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  color: #b8b8be;
-  background: linear-gradient(135deg, rgba(68, 202, 129, 0.06), rgba(249, 142, 82, 0.06));
-}
-.cs-tutoring-frame-placeholder i {
-  font-size: 2.5rem;
-}
-.cs-tutoring-frame-placeholder span {
+  gap: 0.5rem;
+  max-width: calc(100% - 2.2rem);
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
   font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
   font-weight: 500;
+  color: #1d1d1f;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
-.cs-tutoring-text {
-  padding: 1rem 0;
+.cs-hero-photo figcaption i {
+  color: var(--brand-primary);
 }
-.cs-tutoring-eyebrow {
-  display: block;
+
+/* --- Stats band --- */
+.cs-stats {
+  padding: 1rem 0 0;
+}
+.cs-stats-band {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  background: linear-gradient(120deg, #145434 0%, #1f7a4a 55%, #2a8f57 100%);
+  border-radius: 22px;
+  padding: 2.25rem 1rem;
+  box-shadow: 0 20px 44px -18px rgba(20, 84, 52, 0.55);
+}
+.cs-stat {
+  text-align: center;
+  padding: 0.25rem 1.25rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+}
+.cs-stat:last-child {
+  border-right: 0;
+}
+.cs-stat-value {
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.cs-stat-label {
+  font-size: 0.92rem;
+  color: rgba(226, 246, 235, 0.85);
+  line-height: 1.4;
+}
+.cs-stat-footnote {
   font-size: 0.72rem;
+  color: rgba(226, 246, 235, 0.65);
+  font-style: italic;
+}
+
+/* --- Programs --- */
+.cs-programs {
+  padding: 3.5rem 0 0;
+  text-align: center;
+}
+.cs-programs-label {
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--brand-primary);
-  margin-bottom: 1rem;
+  color: #86868b;
+  margin: 0 0 1rem;
 }
-.cs-tutoring-caption {
-  font-family: "Outfit", sans-serif;
-  font-size: clamp(1.25rem, 1.8vw, 1.55rem);
-  line-height: 1.4;
-  font-weight: 500;
-  color: #1d1d1f;
-  margin: 0;
-  letter-spacing: -0.01em;
+.cs-programs-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.cs-chip {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(68, 202, 129, 0.35);
+  color: #1b5f3a;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
-/* --- Hero stats card (right column when stats exist) --- */
-.cs-hero-stats {
+/* --- Shared section header --- */
+.cs-section-header {
+  text-align: center;
+  margin-bottom: 3.25rem;
+}
+.cs-section-heading {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  color: #1d1d1f;
+  margin: 0.75rem 0 0 0;
+}
+
+/* --- Story: three cards --- */
+.cs-story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.cs-story-card {
+  position: relative;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  padding: 2rem 1.85rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
-.cs-hero-stats-eyebrow {
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--brand-primary);
-  margin-bottom: 1.5rem;
+.cs-story-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2db06a, #c4a634, #e87a3a);
 }
-.cs-hero-stats-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem 1.25rem;
+.cs-story-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
 }
-.cs-hero-stat {
-  min-width: 0;
-}
-.cs-hero-stat-value {
-  font-family: "Outfit", sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.5rem, 2.4vw, 1.85rem);
-  line-height: 1.05;
-  letter-spacing: -0.015em;
-  color: #1d1d1f;
-  margin-bottom: 0.4rem;
-}
-.cs-hero-stat-label {
-  font-size: 0.85rem;
-  color: #6e6e73;
-  line-height: 1.4;
-  margin-bottom: 0.25rem;
-}
-.cs-hero-stat-footnote {
-  font-size: 0.7rem;
-  color: #86868b;
-  font-style: italic;
-  line-height: 1.4;
-}
-
-/* --- Story (Challenge / Solution / Outcome — clean prose) --- */
-.cs-story-inner {
-  max-width: 720px;
-  margin: 0 auto;
-}
-.cs-story-block {
-  margin-bottom: 3.25rem;
-}
-.cs-story-block:last-child {
-  margin-bottom: 0;
+.cs-story-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(68, 202, 129, 0.12);
+  color: #1f8a52;
+  font-size: 1.15rem;
 }
 .cs-story-eyebrow {
-  display: inline-block;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--brand-primary);
-  margin-bottom: 0.75rem;
 }
 .cs-story-heading {
   font-family: "Outfit", sans-serif;
   font-weight: 700;
-  font-size: clamp(1.5rem, 2.4vw, 1.85rem);
-  line-height: 1.2;
+  font-size: 1.35rem;
+  line-height: 1.25;
   letter-spacing: -0.01em;
   color: #1d1d1f;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.85rem 0;
 }
 .cs-story-body {
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   line-height: 1.7;
-  color: #404040;
+  color: #48484d;
   margin: 0;
 }
 
-/* --- Platform — alternating rows of Scorgi screenshots --- */
+/* --- Platform: grid of framed screenshots --- */
 .cs-platform-section {
-  background: #f8f8fa;
+  background: #f6f8f7;
 }
-.cs-platform-header {
-  text-align: center;
-  margin-bottom: 4rem;
+.cs-shots {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.25rem 1.75rem;
 }
-.cs-platform-heading {
-  font-family: "Outfit", sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.85rem, 3vw, 2.25rem);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  color: #1d1d1f;
-  margin: 0.75rem 0 0 0;
+.cs-shot {
+  margin: 0;
 }
-.cs-platform-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  max-width: 1080px;
-  margin: 0 auto;
-}
-.cs-platform-row {
-  display: flex;
-  align-items: center;
-  gap: 3.5rem;
-}
-.cs-platform-row > * {
-  flex: 1 1 0;
-  min-width: 0;
-}
-.cs-platform-row:nth-child(even) {
-  flex-direction: row-reverse;
-}
-.cs-platform-row-media {
+.cs-shot-frame {
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.07);
   border-radius: 14px;
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  aspect-ratio: 16 / 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.85rem;
-  box-sizing: border-box;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
   transition: transform 300ms ease, box-shadow 300ms ease;
 }
-.cs-platform-row:hover .cs-platform-row-media {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.1);
+.cs-shot:hover .cs-shot-frame {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.12);
 }
-.cs-platform-row-media img {
+.cs-shot-bar {
+  display: flex;
+  gap: 6px;
+  padding: 9px 12px;
+  background: #f1f3f2;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.cs-shot-bar span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ff5f57;
+}
+.cs-shot-bar span:nth-child(2) {
+  background: #febc2e;
+}
+.cs-shot-bar span:nth-child(3) {
+  background: #28c840;
+}
+.cs-shot-frame img {
   display: block;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  border-radius: 6px;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
 }
-.cs-platform-row-text {
-  padding: 0 0.5rem;
+.cs-shot figcaption {
+  padding: 1.1rem 0.25rem 0;
 }
-.cs-platform-row-title {
+.cs-shot-title {
   font-family: "Outfit", sans-serif;
   font-weight: 700;
-  font-size: clamp(1.45rem, 2.2vw, 1.75rem);
-  letter-spacing: -0.015em;
+  font-size: 1.2rem;
   color: #1d1d1f;
-  margin: 0 0 0.85rem 0;
-  line-height: 1.15;
+  margin: 0 0 0.4rem 0;
 }
-.cs-platform-row-desc {
-  font-size: 1.05rem;
-  line-height: 1.65;
-  color: #404040;
+.cs-shot-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #55555a;
   margin: 0;
+}
+
+@media (max-width: 991.98px) {
+  .cs-hero-grid-photo,
+  .cs-story-grid {
+    grid-template-columns: 1fr;
+  }
+  .cs-hero-grid-photo {
+    gap: 2.5rem;
+  }
+  .cs-shots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 575.98px) {
+  .cs-hero {
+    padding: 6.5rem 0 2rem;
+  }
+  .cs-shots {
+    grid-template-columns: 1fr;
+  }
+  .cs-stats-band {
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem 0.5rem;
+    row-gap: 1.5rem;
+  }
+  .cs-stat {
+    border-right: 0;
+  }
+  .cs-story-card {
+    padding: 1.6rem 1.35rem;
+  }
 }
 
 /* --- Pull quote (rendered when partner-approved) --- */
@@ -3650,6 +3724,26 @@ a.error-card-link {
   line-height: 1.4;
 }
 
+.cs-spotlight-modules {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: -0.25rem 0 1.85rem;
+}
+.cs-spotlight-modules-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #86868b;
+  margin-right: 0.35rem;
+}
+.cs-chip-sm {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+}
+
 /* Action wrapper — keeps the button at its natural width and stops it
    from being affected by the flex column on the parent. */
 .cs-spotlight-actions {
@@ -3826,53 +3920,13 @@ a.error-card-link {
   }
 }
 
-/* --- Case study page: tablet — stack the hero stats card below content --- */
-@media (max-width: 960px) {
-  .cs-hero-with-stats .cs-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  .cs-hero-content {
-    max-width: 100%;
-  }
-}
-
 /* --- Case study page: mobile tightening --- */
 @media (max-width: 768px) {
-  .cs-hero {
-    padding: 5rem 0 2.5rem;
-  }
-  .cs-tutoring,
   .cs-story,
   .cs-platform-section,
   .cs-quote,
   .cs-pdf {
     padding: 3.5rem 0;
-  }
-  .cs-hero-stats {
-    padding: 1.5rem;
-  }
-  .cs-tutoring-grid {
-    grid-template-columns: 1fr;
-    gap: 1.75rem;
-  }
-  .cs-tutoring-frame {
-    aspect-ratio: 16 / 10;
-  }
-  .cs-tutoring-text {
-    padding: 0;
-  }
-  .cs-platform-rows {
-    gap: 3.5rem;
-  }
-  .cs-platform-row,
-  .cs-platform-row:nth-child(even) {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: stretch;
-  }
-  .cs-platform-row-text {
-    padding: 0;
   }
   .cs-pdf-card {
     flex-direction: column;
